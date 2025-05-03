@@ -22,6 +22,10 @@ Route::get('/car detail/{id}', function ($id) {
     $car = Car::find($id);
     return view('carDetail', ['car' => $car]);
 });
+Route::get('/car detail', function () {
+
+    return view('carDetail');
+});
 Route::get('/booking', function () {
     return view('bookingPage');
 });

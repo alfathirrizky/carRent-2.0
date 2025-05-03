@@ -23,7 +23,7 @@
             </p>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                 <a href="{{ url('/admin') }}"
-                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">
                     Get started
                     <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 14 10">
@@ -31,7 +31,7 @@
                             d="M1 5h12m0 0L9 1m4 4L9 9" />
                     </svg>
                 </a>
-                <a href="a"
+                <a href="#chooseUs"
                     class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
                     Learn more
                 </a>
@@ -39,7 +39,7 @@
         </div>
     </section>
     {{-- why choose us --}}
-    <section class="flex flex-col items-center justify-center m-8 gap-6">
+    <section id="chooseUs" class=" flex flex-col items-center justify-center m-8 gap-6">
         <h1 class="text-4xl font-bold">Why choose us</h1>
         <div class="flex flex-row xs:flex-col lg:flex-row">
             <div class="text1 w-xl flex flex-col justify-start py-10 gap-15">
@@ -77,7 +77,7 @@
         </div>
     </section>
     {{-- frequently asked --}}
-    <section class=" m-5 my-10 flex flex-row justify-center items-center gap-20 flex-wrap md:flex-wrap">
+    <section id="question" class=" m-5 my-10 flex flex-row justify-center items-center gap-20 flex-wrap md:flex-wrap">
         <div class="img">
             <div class=" bg-blue-900 w-2xl h-96 rounded-3xl flex items-center">
                 <img src="{{ url('img/fortuner.png') }}" alt="" srcset="" class=" ml-20">
@@ -89,7 +89,7 @@
             <div id="accordion-open" data-accordion="open" class=" mt-7">
                 <h2 id="accordion-open-heading-1">
                     <button type="button"
-                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 gap-3"
                         data-accordion-target="#accordion-open-body-1" aria-expanded="true"
                         aria-controls="accordion-open-body-1">
                         <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
@@ -106,15 +106,15 @@
                     </button>
                 </h2>
                 <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur
+                    <div class="p-5 border border-b-0 border-gray-200">
+                        <p class="mb-2 text-gray-500">Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Minus, impedit. Sed laborum sint enim pariatur consectetur quibusdam omnis
                             ex nulla eveniet possimus mollitia rem fuga delectus veniam eius at soluta, error</p>
                     </div>
                 </div>
                 <h2 id="accordion-open-heading-2">
                     <button type="button"
-                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 gap-3"
                         data-accordion-target="#accordion-open-body-2" aria-expanded="false"
                         aria-controls="accordion-open-body-2">
                         <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
@@ -131,19 +131,19 @@
                     </button>
                 </h2>
                 <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed
+                    <div class="p-5 border border-b-0 border-gray-200">
+                        <p class="mb-2 text-gray-500">Flowbite is first conceptualized and designed
                             using the Figma software so everything you see in the library has a design equivalent in our
                             Figma file.</p>
-                        <p class="text-gray-500 dark:text-gray-400">Check out the <a
+                        <p class="text-gray-500">Check out the <a
                                 href="https://flowbite.com/figma/"
-                                class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based
+                                class="text-blue-600 hover:underline">Figma design system</a> based
                             on the utility classes from Tailwind CSS and components from Flowbite.</p>
                     </div>
                 </div>
                 <h2 id="accordion-open-heading-3">
                     <button type="button"
-                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 gap-3"
                         data-accordion-target="#accordion-open-body-3" aria-expanded="false"
                         aria-controls="accordion-open-body-3">
                         <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
@@ -160,20 +160,20 @@
                     </button>
                 </h2>
                 <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
-                    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core
+                    <div class="p-5 border border-t-0 border-gray-200">
+                        <p class="mb-2 text-gray-500">The main difference is that the core
                             components from Flowbite are open source under the MIT license, whereas Tailwind UI is a
                             paid product. Another difference is that Flowbite relies on smaller and standalone
                             components, whereas Tailwind UI offers sections of pages.</p>
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both
+                        <p class="mb-2 text-gray-500">However, we actually recommend using both
                             Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you
                             from using the best of two worlds.</p>
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                        <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                        <p class="mb-2 text-gray-500">Learn more about these technologies:</p>
+                        <ul class="ps-5 text-gray-500 list-disc">
                             <li><a href="https://flowbite.com/pro/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+                                    class="text-blue-600 hover:underline">Flowbite Pro</a></li>
                             <li><a href="https://tailwindui.com/" rel="nofollow"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+                                    class="text-blue-600 hover:underline">Tailwind UI</a></li>
                         </ul>
                     </div>
                 </div>
@@ -181,25 +181,21 @@
         </div>
     </section>
     {{-- car list --}}
-    <section class="m-5 flex flex-col gap-5 flex-wrap snap-x">
+    <section id="mostRent" class="m-5 flex flex-col gap-5 flex-wrap snap-x">
         <div class="text flex justify-between items-center">
             <h1 class=" text-4xl font-bold">Most Frequently Rented</h1>
             <a href="cars" class="text-lg font-medium text-blue-700">See all cars</a>
         </div>
         <div class="list flex gap-2">
-            <x-card></x-card>
-            <x-card></x-card>
-            <x-card></x-card>
-            <x-card></x-card>
             <div class="card flex justify-center items-center gap-5">
                 <div
-                    class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+                    class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl">
                     <a href="#">
                         <img class="p-8 rounded-t-lg" src="{{ url('img/inova.png') }}" alt="product image" />
                     </a>
                     <div class="px-5 pb-5">
                         <a href="#">
-                            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch
+                            <h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch
                                 Series 7 GPS, Aluminium Case, Starlight Sport</h5>
                         </a>
                         <div class="flex items-center mt-2.5 mb-5">
@@ -224,31 +220,33 @@
                                     <path
                                         d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                                 </svg>
-                                <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                                <svg class="w-4 h-4 text-gray-200" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                     <path
                                         d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                                 </svg>
                             </div>
                             <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm ms-3">5.0</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                            <span class="text-3xl font-bold text-gray-900">$599</span>
                             <a href="#"
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
                                 to cart</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="card flex justify-center items-center gap-5">
                 <div
-                    class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+                    class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl">
                     <a href="#">
                         <img class="p-8 rounded-t-lg" src="{{ url('img/inova.png') }}" alt="product image" />
                     </a>
                     <div class="px-5 pb-5">
                         <a href="#">
-                            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch
+                            <h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch
                                 Series 7 GPS, Aluminium Case, Starlight Sport</h5>
                         </a>
                         <div class="flex items-center mt-2.5 mb-5">
@@ -273,31 +271,33 @@
                                     <path
                                         d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                                 </svg>
-                                <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                                <svg class="w-4 h-4 text-gray-200" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                     <path
                                         d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                                 </svg>
                             </div>
                             <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm ms-3">5.0</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                            <span class="text-3xl font-bold text-gray-900">$599</span>
                             <a href="#"
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
                                 to cart</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="card flex justify-center items-center gap-5">
                 <div
-                    class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+                    class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl">
                     <a href="#">
                         <img class="p-8 rounded-t-lg" src="{{ url('img/inova.png') }}" alt="product image" />
                     </a>
                     <div class="px-5 pb-5">
                         <a href="#">
-                            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch
+                            <h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch
                                 Series 7 GPS, Aluminium Case, Starlight Sport</h5>
                         </a>
                         <div class="flex items-center mt-2.5 mb-5">
@@ -322,31 +322,33 @@
                                     <path
                                         d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                                 </svg>
-                                <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                                <svg class="w-4 h-4 text-gray-200" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                     <path
                                         d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                                 </svg>
                             </div>
                             <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm ms-3">5.0</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                            <span class="text-3xl font-bold text-gray-900">$599</span>
                             <a href="#"
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
                                 to cart</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="card flex justify-center items-center gap-5">
                 <div
-                    class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
+                    class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl">
                     <a href="#">
                         <img class="p-8 rounded-t-lg" src="{{ url('img/inova.png') }}" alt="product image" />
                     </a>
                     <div class="px-5 pb-5">
                         <a href="#">
-                            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch
+                            <h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch
                                 Series 7 GPS, Aluminium Case, Starlight Sport</h5>
                         </a>
                         <div class="flex items-center mt-2.5 mb-5">
@@ -371,66 +373,17 @@
                                     <path
                                         d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                                 </svg>
-                                <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                                <svg class="w-4 h-4 text-gray-200" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                     <path
                                         d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                                 </svg>
                             </div>
                             <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm ms-3">5.0</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
-                            <a href="#"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
-                                to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="p-8 rounded-t-lg" src="{{ url('img/inova.png') }}" alt="product image" />
-                    </a>
-                    <div class="px-5 pb-5">
-                        <a href="#">
-                            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch
-                                Series 7 GPS, Aluminium Case, Starlight Sport</h5>
-                        </a>
-                        <div class="flex items-center mt-2.5 mb-5">
-                            <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                    <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                </svg>
-                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                    <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                </svg>
-                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                    <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                </svg>
-                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                    <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                </svg>
-                                <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                    <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                </svg>
-                            </div>
-                            <span
-                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                            <span class="text-3xl font-bold text-gray-900">$599</span>
                             <a href="#"
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
                                 to cart</a>
@@ -440,7 +393,7 @@
             </div>
     </section>
     {{-- testimoni --}}
-    <section class="p-8 m-5 my-9 bg-blue-900 rounded-lg flex flex-col gap-5">
+    <section id="testimoni" class="p-8 m-5 my-9 bg-blue-900 rounded-lg flex flex-col gap-5">
         <div class="text">
             <h1 class=" text-white font-semibold">Testimonials</h1>
             <h1 class="text-4xl text-white font-semibold">Customers review</h1>

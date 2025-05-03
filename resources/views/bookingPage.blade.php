@@ -11,14 +11,26 @@
 
 <body>
     <x-navbar></x-navbar>
-    <section class="flex justify-center items-center flex-col gap-5">
+    <section class="flex justify-center items-center flex-col gap-5 my-5">
         <h1 class="text-4xl font-bold">Booking</h1>
-        <div class="bookForm rounded-3xl bg-blue-700 w-4xl flex flex-col items-center p-10 gap-5">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <button class=" bg-white px-32 py-1 text-xl font-bold rounded-2xl">Book a car</button>
+        <div class="bookForm rounded-3xl bg-blue-700 w-4xl flex flex-col items-center p-15 gap-3">
+            <div class="input flex flex-col gap-2">
+                <h1 class="px-3 font-medium text-md text-white">Nama Lengkap</h1>
+                <input class="w-2xl rounded-xl" type="text" value="" placeholder="Nama">
+            </div>
+            <div class="input flex flex-col gap-2">
+                <h1 class="px-3 font-medium text-md text-white">Nomer Telepon</h1>
+                <input class="w-2xl rounded-xl" type="text" value="" placeholder="0857xxxxxx">
+            </div>
+            <div class="input flex flex-col gap-2">
+                <h1 class="px-3 font-medium text-md text-white">Mobil</h1>
+                <input class="w-2xl rounded-xl" type="text" value="" placeholder="Toyota Innova">
+            </div>
+            <div class="input flex flex-col gap-2 mb-5">
+                <h1 class="px-3 font-medium text-md text-white">Durasi</h1>
+                <input class="w-2xl rounded-xl" type="text" value="" placeholder="12 Jam">
+            </div>
+            <button class=" bg-white px-32 py-1 text-xl font-medium rounded-2xl">Book a car</button>
         </div>
     </section>
     <x-footer></x-footer>

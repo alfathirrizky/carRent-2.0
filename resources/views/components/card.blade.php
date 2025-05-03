@@ -1,4 +1,4 @@
-{{-- @foreach ($car as $cars)
+{{-- @foreach ($cars as $car)
     <div class="flex flex-col gap-5 bg-white rounded-2xl shadow-xl p-5">
         <div class="img">{{ $car['gambar_mobil'] }}</div>
         <div class="flex justify-between items-center">
