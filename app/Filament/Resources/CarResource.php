@@ -9,7 +9,9 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -26,30 +28,35 @@ class CarResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Card::make()
-                ->schema([
-                    Forms\Components\TextInput::make('nama_mobil')->placeholder('Contoh: Toyota Innova')->label('Nama Mobil')->required(),
-                    Forms\Components\Select::make('durasi')->options([
-                        '12 Jam' => '12 Jam',
-                        '24 Jam' => '24 Jam',
-                        '36 Jam' => '36 Jam',
-                        '48 Jam' => '48 Jam',
-                        '60 Jam' => '60 Jam',
-                        '72 Jam' => '72 Jam'])->placeholder('Pilih Durasi')->required(),
-                    Forms\Components\TextInput::make('harga')->placeholder('Contoh: Rp 1.000.000')->required(),
-                    Forms\Components\Select::make('bahan_bakar')->options([
-                    'Bensin' => 'Bensin',
-                    'Diesel' => 'Diesel'])->label('Bahan Bakar')->placeholder('Pilih Bahan Bakar Mobil')->required(), 
-                    Forms\Components\Select::make('tipe')->options([
-                    'Matic' => 'Matic',
-                    'Manual' => 'Manual'])->label('Tipe Mobil')->placeholder('Pilih Tipe Mobil')->required(), 
-                    Forms\Components\Select::make('seater')->options([
-                    '5 Seater' => '5 Seater',
-                    '7 Seater' => '7 Seater'])->placeholder('Pilih Seater')->required(), 
-                    Forms\Components\Select::make('kategori')->options([
-                    'MPV' => 'MPV',
-                    'SUV' => 'SUV'])->placeholder('Pilih Kategori Mobil')->required(), 
-                    Forms\Components\FileUpload::make('gambar_mobil')->label('Gambar Mobil')->placeholder('Masukkan Gambar Mobil')->required()
-                ])
+                    ->schema([
+                        Forms\Components\TextInput::make('nama_mobil')->placeholder('Contoh: Toyota Innova')->label('Nama Mobil')->required(),
+                        Forms\Components\Select::make('durasi')->options([
+                            '12 Jam' => '12 Jam',
+                            '24 Jam' => '24 Jam',
+                            '36 Jam' => '36 Jam',
+                            '48 Jam' => '48 Jam',
+                            '60 Jam' => '60 Jam',
+                            '72 Jam' => '72 Jam'
+                        ])->placeholder('Pilih Durasi')->required(),
+                        Forms\Components\TextInput::make('harga')->placeholder('Contoh: Rp 1.000.000')->required(),
+                        Forms\Components\Select::make('bahan_bakar')->options([
+                            'Bensin' => 'Bensin',
+                            'Diesel' => 'Diesel'
+                        ])->label('Bahan Bakar')->placeholder('Pilih Bahan Bakar Mobil')->required(),
+                        Forms\Components\Select::make('tipe')->options([
+                            'Matic' => 'Matic',
+                            'Manual' => 'Manual'
+                        ])->label('Tipe Mobil')->placeholder('Pilih Tipe Mobil')->required(),
+                        Forms\Components\Select::make('seater')->options([
+                            '5 Seater' => '5 Seater',
+                            '7 Seater' => '7 Seater'
+                        ])->placeholder('Pilih Seater')->required(),
+                        Forms\Components\Select::make('kategori')->options([
+                            'MPV' => 'MPV',
+                            'SUV' => 'SUV'
+                        ])->placeholder('Pilih Kategori Mobil')->required(),
+                        Forms\Components\FileUpload::make('gambar_mobil')->image()->imagePreviewHeight('250')->directory('cars')->preserveFilenames()->maxSize(10240)->label('Gambar Mobil')->placeholder('Masukkan Gambar Mobil')->acceptedFileTypes(['image/jpeg', 'image/png'])->previewable(false)->required()
+                    ])
             ]);
     }
 
@@ -64,7 +71,7 @@ class CarResource extends Resource
                 Tables\Columns\TextColumn::make('tipe'),
                 Tables\Columns\TextColumn::make('seater'),
                 Tables\Columns\TextColumn::make('kategori'),
-                Tables\Columns\ImageColumn::make('gambar_mobil')->label('Gambar Mobil'),
+                Tables\Columns\ImageColumn::make('gambar_mobil')->label('Gambar Mobil')->height(100),
             ])
             ->filters([
                 //

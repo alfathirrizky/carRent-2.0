@@ -186,12 +186,11 @@
             <h1 class=" text-4xl font-bold">Most Frequently Rented</h1>
             <a href="cars" class="text-lg font-medium text-blue-700">See all cars</a>
         </div>
-        <<<<<<< HEAD <div class="list flex gap-2">
+        <div class="list flex gap-2">
             <x-card></x-card>
             <x-card></x-card>
             <x-card></x-card>
             <x-card></x-card>
-            =======
             <div class="card flex justify-center items-center gap-5">
                 <div
                     class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
@@ -438,7 +437,6 @@
                         </div>
                     </div>
                 </div>
-                >>>>>>> backend
             </div>
     </section>
     {{-- testimoni --}}
