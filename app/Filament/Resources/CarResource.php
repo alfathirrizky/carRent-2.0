@@ -53,9 +53,10 @@ class CarResource extends Resource
                         ])->placeholder('Pilih Seater')->required(),
                         Forms\Components\Select::make('kategori')->options([
                             'MPV' => 'MPV',
-                            'SUV' => 'SUV'
+                            'SUV' => 'SUV',
+                            'HATCHBACK' => 'HATCHBACK'
                         ])->placeholder('Pilih Kategori Mobil')->required(),
-                        Forms\Components\FileUpload::make('gambar_mobil')->image()->imagePreviewHeight('250')->directory('cars')->preserveFilenames()->maxSize(10240)->label('Gambar Mobil')->placeholder('Masukkan Gambar Mobil')->acceptedFileTypes(['image/jpeg', 'image/png'])->previewable(false)->required()
+                        Forms\Components\FileUpload::make('gambar_mobil')->image()->imageEditor()->imagePreviewHeight('250')->directory('mobil')->preserveFilenames()->maxSize(10240)->label('Gambar Mobil')->placeholder('Masukkan Gambar Mobil')->acceptedFileTypes(['image/jpeg', 'image/png'])->visibility('public')->disk('public')->required()
                     ])
             ]);
     }
@@ -71,7 +72,7 @@ class CarResource extends Resource
                 Tables\Columns\TextColumn::make('tipe'),
                 Tables\Columns\TextColumn::make('seater'),
                 Tables\Columns\TextColumn::make('kategori'),
-                Tables\Columns\ImageColumn::make('gambar_mobil')->label('Gambar Mobil')->height(100),
+                ImageColumn::make('image')->label('Image')->width(100),
             ])
             ->filters([
                 //

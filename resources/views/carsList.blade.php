@@ -11,20 +11,32 @@
 
 <body>
     <x-navbar></x-navbar>
-    <section class="m-5 gap-5 flex-wrap">
-        <div class="grid grid-cols-3 grid-rows-2 gap-4">
+    <section class="m-5 gap-5 flex-wrap ">
+        <div class="grid grid-cols-4 gap-4">
             @foreach ($cars as $car)
                 <div class="flex flex-col gap-5 bg-white rounded-2xl shadow-xl p-5">
-                    <div class="img">{{ $car['gambar_mobil'] }}</div>
+                    <div class="flex items-center justify-center">
+                        <img class="w-70 h-50 object-contain" src="{{ asset('storage/' . $car->gambar_mobil) }}"
+                            alt="" srcset="">
+                    </div>
                     <div class="flex justify-between items-center">
                         <h1 class=" text-2xl font-bold">{{ $car['nama_mobil'] }}</h1>
                         <label class=" bg-blue-400 text-white font-medium p-1 px-6 text-xs rounded-2xl"
                             for="">{{ $car['kategori'] }}</label>
                     </div>
-                    <div class="flex gap-5 mb-7">
-                        <img src="{{ url('img/bahan bakar.svg') }}" alt="seaters" class="w-10 h-10">
-                        <img src="{{ url('img/bahan bakar.svg') }}" alt="seaters" class="w-10 h-10">
-                        <img src="{{ url('img/bahan bakar.svg') }}" alt="seaters" class="w-10 h-10">
+                    <div class="flex gap-3 mb-7">
+                        <div class="flex gap-1 items-center">
+                            <img src="{{ url('img/car-chair 1.svg') }}" alt="seaters" class="w-5 h-5">
+                            <p class="text-xs">{{ $car['seater'] }}</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <img src="{{ url('img/gas-station 1.svg') }}" alt="seaters" class="w-5 h-5">
+                            <p class="text-xs">{{ $car['bahan_bakar'] }}</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <img src="{{ url('img/gearbox 1.svg') }}" alt="seaters" class="w-5 h-5">
+                            <p class="text-xs">{{ $car['tipe'] }}</p>
+                        </div>
                     </div>
                     <div class=" flex justify-between">
                         <p class=" text-md font-medium">{{ $car['harga'] }}</p>

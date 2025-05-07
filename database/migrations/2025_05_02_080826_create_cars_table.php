@@ -19,7 +19,7 @@ return new class extends Migration
             $table->enum('bahan_bakar', ['Bensin', 'Diesel']);
             $table->enum('tipe', ['Matic', 'Manual']);
             $table->enum('seater', ['5 Seater', '7 Seater']);
-            $table->enum('kategori', ['MPV', 'SUV']);
+            $table->enum('kategori', ['MPV', 'SUV', 'HATCHBACK']);
             $table->string('gambar_mobil');
             $table->timestamps();
         });
