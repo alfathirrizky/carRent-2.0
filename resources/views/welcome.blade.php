@@ -56,8 +56,8 @@
                         dalam kondisi prima dan rutin diservis.</p>
                 </div>
             </div>
-            <div class="content w-40 bg-blue-900 rounded-3xl flex flex-col justify-between py-10 gap-10">
-                <img class="" src="{{ url('img/inova.png') }}" alt="" srcset="">
+            <div class="content relative w-40 bg-blue-900 rounded-3xl flex flex-col justify-between py-10 gap-10">
+                <img class="w-2xl" src="{{ url('img/inova.png') }}" alt="" srcset="">
                 <img src="{{ url('img/jazz.png') }}" alt="" srcset="">
             </div>
             <div class="text2 w-xl flex flex-col justify-start py-10 gap-15 text-right">
@@ -223,9 +223,16 @@
     </section>
     {{-- testimoni --}}
     <section id="testimoni" class="p-8 m-5 my-9 bg-blue-900 rounded-lg flex flex-col gap-5">
-        <div class="text">
-            <h1 class=" text-white font-semibold">Testimonials</h1>
-            <h1 class="text-4xl text-white font-semibold">Customers review</h1>
+        <div class="text flex justify-between items-end">
+            <div>
+                <h1 class=" text-white font-semibold">Testimonials</h1>
+                <h1 class="text-4xl text-white font-semibold">Customers review</h1>
+            </div>
+            <div>
+                <button class="bg-white py-2 px-3 rounded-3xl font-medium text-sm">
+                    Share your journey!
+                </button>
+            </div>
         </div>
         <div class="flex flex-row flex-wrap gap-3 md:flex-wrap">
             <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
