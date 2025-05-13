@@ -39,7 +39,7 @@
         </div>
     </section>
     {{-- why choose us --}}
-    <section id="chooseUs" class=" flex flex-col items-center justify-center m-8 gap-6">
+    <section id="chooseUs" class="flex flex-col items-center justify-center m-8 gap-6">
         <h1 class="text-4xl font-bold">Why choose us</h1>
         <div class="flex flex-row xs:flex-col lg:flex-row">
             <div class="text1 w-xl flex flex-col justify-start py-10 gap-15">
@@ -50,7 +50,7 @@
                         dalam kondisi prima dan rutin diservis.</p>
                 </div>
                 <div>
-                    <h2 class=" text-xl font-bold">Armada Terawat & Beragam</h2>
+                    <h2 class="text-xl font-bold">Armada Terawat & Beragam</h2>
                     <p>Kami menyediakan berbagai jenis kendaraan, mulai dari city car hingga kendaraan premium, yang
                         selalu
                         dalam kondisi prima dan rutin diservis.</p>

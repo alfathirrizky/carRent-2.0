@@ -29,3 +29,6 @@ Route::get('/car detail', function () {
 Route::get('/booking', function () {
     return view('bookingPage');
 });
+Route::get('/orderdetail', function () {
+    return view('orderDetail');
+});
