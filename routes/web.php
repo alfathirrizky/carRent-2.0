@@ -3,6 +3,7 @@
 use App\Models\Admin;
 use App\Models\Car;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookingController;
 
 Route::get('/', function () {
     return view('welcome', ['title' => 'car list', 'cars' => Car::all()]);
@@ -29,3 +30,7 @@ Route::get('/car detail', function () {
 Route::get('/booking', function () {
     return view('bookingPage');
 });
+Route::get('/testimoni', function () {
+    return view('reviewPage');
+});
+Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
