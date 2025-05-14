@@ -9,6 +9,8 @@ class BookingController extends Controller
 {
     public function store(Request $request)
     {
+
+        // dd($request);
         // Validasi data
         $validated = $request->validate([
             'nama' => 'required|string|max:100',

@@ -40,9 +40,17 @@
                 <input class="w-full rounded-xl p-2" type="text" name="mobil" placeholder="Toyota Innova">
             </div>
 
-            <div class="input w-full flex flex-col gap-2 mb-4">
-                <label class="px-3 font-medium text-md text-white">Durasi</label>
-                <input class="w-full rounded-xl p-2" type="text" name="durasi" placeholder="12 Jam">
+            <div class="input w-full flex flex-col mb-4">
+                <label for="countries" class="block mb-2 px-3 text-md font-semibold text-white">Durasi</label>
+                <select id="jam" name="durasi"
+                    class="bg-gray-50 border border-gray-300 text-gray-500 text-md rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option>12 Jam</option>
+                    <option>24 Jam</option>
+                    <option>36 Jam</option>
+                    <option>48 Jam</option>
+                    <option>60 Jam</option>
+                    <option>72 Jam</option>
+                </select>
             </div>
 
             <button type="submit"
