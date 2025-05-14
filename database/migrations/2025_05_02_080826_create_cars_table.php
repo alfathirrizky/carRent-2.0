@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cars', function (Blueprint $table) {
-            $table->id();
+            $table->id('id');
             $table->string('nama_mobil');
             $table->enum('durasi', ['12 Jam', '24 Jam', '36 Jam', '48 Jam', '60 Jam', '72 Jam']);
             $table->string('harga');

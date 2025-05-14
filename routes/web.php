@@ -30,4 +30,7 @@ Route::get('/car detail', function () {
 Route::get('/booking', function () {
     return view('bookingPage');
 });
+Route::get('/testimoni', function () {
+    return view('reviewPage');
+});
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');

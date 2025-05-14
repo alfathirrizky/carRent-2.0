@@ -125,8 +125,8 @@
                             </svg>What do i need to rent a car?</span>
                         <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" d="M9 5 5 1 1 5" />
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
                         </svg>
                     </button>
                 </h2>
@@ -153,8 +153,8 @@
                             </svg> What do i need to rent a car?</span>
                         <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" d="M9 5 5 1 1 5" />
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
                         </svg>
                     </button>
                 </h2>
@@ -189,8 +189,8 @@
             @foreach ($cars->take(4) as $car)
                 <div class="flex flex-col gap-5 bg-white rounded-2xl shadow-xl p-5">
                     <div class="flex items-center justify-center">
-                        <img class="w-70 h-50 object-contain" src="{{ asset('storage/' . $car->gambar_mobil) }}"
-                            alt="" srcset="">
+                        <img class="w-70 h-50 object-contain" src="{{ asset('storage/' . $car->gambar_mobil) }}" alt=""
+                            srcset="">
                     </div>
                     <div class="flex justify-between items-center">
                         <h1 class=" text-2xl font-bold">{{ $car['nama_mobil'] }}</h1>
@@ -224,38 +224,49 @@
     {{-- testimoni --}}
     <section id="testimoni" class="p-8 m-5 my-9 bg-blue-900 rounded-lg flex flex-col gap-5">
         <div class="text">
-            <h1 class=" text-white font-semibold">Testimonials</h1>
-            <h1 class="text-4xl text-white font-semibold">Customers review</h1>
-        </div>
-        <div class="flex flex-row flex-wrap gap-3 md:flex-wrap">
-            <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
-                <h1 class=" font-semibold text-xl">Very easy this was to integrate</h1>
-                <p class=" text-md text-center">“If you care for your time, I hands down would go with this."</p>
-                <div class="profile flex items-center gap-2">
-                    <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
-                    {{-- <img src="{{ url('img/inova.png') }}" alt="profile" srcset="" class="h-4 w-4 rounded-4xl"> --}}
-                    <h1 class=" font-semibold">John Doe</h1>
+            <div class="text flex justify-between items-end mb-4">
+                <div>
+                    <h1 class=" text-white font-semibold">Testimoni</h1>
+                    <h1 class="text-4xl text-white font-semibold">Customers review</h1>
+                </div>
+                <div>
+                    <a href="{{ url('/testimoni') }}" class="bg-white py-2 px-3 rounded-3xl font-medium text-sm">
+                        Share your journey!
+                    </a>
                 </div>
             </div>
-            <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
-                <h1 class=" font-semibold text-xl">Very easy this was to integrate</h1>
-                <p class=" text-md text-center">“If you care for your time, I hands down would go with this."</p>
-                <div class="profile flex items-center gap-2">
-                    <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
-                    {{-- <img src="{{ url('img/inova.png') }}" alt="profile" srcset="" class="h-4 w-4 rounded-4xl"> --}}
-                    <h1 class=" font-semibold">John Doe</h1>
+            <div class="flex flex-row flex-wrap gap-3 md:flex-wrap">
+                <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
+                    <h1 class=" font-semibold text-xl">Very easy this was to integrate</h1>
+                    <p class=" text-md text-center">“If you care for your time, I hands down would go with this."</p>
+                    <div class="profile flex items-center gap-2">
+                        <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
+                        {{-- <img src="{{ url('img/inova.png') }}" alt="profile" srcset="" class="h-4 w-4 rounded-4xl">
+                        --}}
+                        <h1 class=" font-semibold">John Doe</h1>
+                    </div>
+                </div>
+                <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
+                    <h1 class=" font-semibold text-xl">Very easy this was to integrate</h1>
+                    <p class=" text-md text-center">“If you care for your time, I hands down would go with this."</p>
+                    <div class="profile flex items-center gap-2">
+                        <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
+                        {{-- <img src="{{ url('img/inova.png') }}" alt="profile" srcset="" class="h-4 w-4 rounded-4xl">
+                        --}}
+                        <h1 class=" font-semibold">John Doe</h1>
+                    </div>
+                </div>
+                <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
+                    <h1 class=" font-semibold text-xl">Very easy this was to integrate</h1>
+                    <p class=" text-md text-center">“If you care for your time, I hands down would go with this."</p>
+                    <div class="profile flex items-center gap-2">
+                        <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
+                        {{-- <img src="{{ url('img/inova.png') }}" alt="profile" srcset="" class="h-4 w-4 rounded-4xl">
+                        --}}
+                        <h1 class=" font-semibold">John Doe</h1>
+                    </div>
                 </div>
             </div>
-            <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
-                <h1 class=" font-semibold text-xl">Very easy this was to integrate</h1>
-                <p class=" text-md text-center">“If you care for your time, I hands down would go with this."</p>
-                <div class="profile flex items-center gap-2">
-                    <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
-                    {{-- <img src="{{ url('img/inova.png') }}" alt="profile" srcset="" class="h-4 w-4 rounded-4xl"> --}}
-                    <h1 class=" font-semibold">John Doe</h1>
-                </div>
-            </div>
-        </div>
     </section>
     <x-footer></x-footer>
     <script>
@@ -264,7 +275,7 @@
 
         // Change the icons inside the button based on previous settings
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
-                '(prefers-color-scheme: dark)').matches)) {
+            '(prefers-color-scheme: dark)').matches)) {
             themeToggleLightIcon.classList.remove('hidden');
         } else {
             themeToggleDarkIcon.classList.remove('hidden');
@@ -272,7 +283,7 @@
 
         var themeToggleBtn = document.getElementById('theme-toggle');
 
-        themeToggleBtn.addEventListener('click', function() {
+        themeToggleBtn.addEventListener('click', function () {
 
             // toggle icons inside button
             themeToggleDarkIcon.classList.toggle('hidden');
