@@ -30,7 +30,13 @@ Route::get('/car detail', function () {
 Route::get('/booking', function () {
     return view('bookingPage');
 });
+<<<<<<< HEAD
 Route::get('/testimoni', function () {
     return view('reviewPage');
 });
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
+=======
+Route::get('/orderdetail', function () {
+    return view('orderDetail');
+});
+>>>>>>> responsive-fe

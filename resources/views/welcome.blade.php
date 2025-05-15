@@ -39,7 +39,7 @@
         </div>
     </section>
     {{-- why choose us --}}
-    <section id="chooseUs" class=" flex flex-col items-center justify-center m-8 gap-6">
+    <section id="chooseUs" class="flex flex-col items-center justify-center m-8 gap-6">
         <h1 class="text-4xl font-bold">Why choose us</h1>
         <div class="flex flex-row xs:flex-col lg:flex-row">
             <div class="text1 w-xl flex flex-col justify-start py-10 gap-15">
@@ -50,14 +50,14 @@
                         dalam kondisi prima dan rutin diservis.</p>
                 </div>
                 <div>
-                    <h2 class=" text-xl font-bold">Armada Terawat & Beragam</h2>
+                    <h2 class="text-xl font-bold">Armada Terawat & Beragam</h2>
                     <p>Kami menyediakan berbagai jenis kendaraan, mulai dari city car hingga kendaraan premium, yang
                         selalu
                         dalam kondisi prima dan rutin diservis.</p>
                 </div>
             </div>
-            <div class="content w-40 bg-blue-900 rounded-3xl flex flex-col justify-between py-10 gap-10">
-                <img class="" src="{{ url('img/inova.png') }}" alt="" srcset="">
+            <div class="content relative w-40 bg-blue-900 rounded-3xl flex flex-col justify-between py-10 gap-10">
+                <img class="w-2xl" src="{{ url('img/inova.png') }}" alt="" srcset="">
                 <img src="{{ url('img/jazz.png') }}" alt="" srcset="">
             </div>
             <div class="text2 w-xl flex flex-col justify-start py-10 gap-15 text-right">
@@ -223,6 +223,7 @@
     </section>
     {{-- testimoni --}}
     <section id="testimoni" class="p-8 m-5 my-9 bg-blue-900 rounded-lg flex flex-col gap-5">
+<<<<<<< HEAD
         <div class="text">
             <div class="text flex justify-between items-end mb-4">
                 <div>
@@ -233,6 +234,27 @@
                     <a href="{{ url('/testimoni') }}" class="bg-white py-2 px-3 rounded-3xl font-medium text-sm">
                         Share your journey!
                     </a>
+=======
+        <div class="text flex justify-between items-end">
+            <div>
+                <h1 class=" text-white font-semibold">Testimonials</h1>
+                <h1 class="text-4xl text-white font-semibold">Customers review</h1>
+            </div>
+            <div>
+                <button class="bg-white py-2 px-3 rounded-3xl font-medium text-sm">
+                    Share your journey!
+                </button>
+            </div>
+        </div>
+        <div class="flex flex-row flex-wrap gap-3 md:flex-wrap">
+            <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
+                <h1 class=" font-semibold text-xl">Very easy this was to integrate</h1>
+                <p class=" text-md text-center">“If you care for your time, I hands down would go with this."</p>
+                <div class="profile flex items-center gap-2">
+                    <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
+                    {{-- <img src="{{ url('img/inova.png') }}" alt="profile" srcset="" class="h-4 w-4 rounded-4xl"> --}}
+                    <h1 class=" font-semibold">John Doe</h1>
+>>>>>>> responsive-fe
                 </div>
             </div>
             <div class="flex flex-row flex-wrap gap-3 md:flex-wrap">
