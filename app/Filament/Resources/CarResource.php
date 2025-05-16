@@ -65,14 +65,14 @@ class CarResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nama_mobil')->label('Nama Mobil'),
-                Tables\Columns\TextColumn::make('durasi'),
-                Tables\Columns\TextColumn::make('harga'),
-                Tables\Columns\TextColumn::make('bahan_bakar')->label('Bahan Bakar'),
-                Tables\Columns\TextColumn::make('tipe'),
-                Tables\Columns\TextColumn::make('seater'),
-                Tables\Columns\TextColumn::make('kategori'),
-                ImageColumn::make('image')->label('Image')->width(100),
+                Tables\Columns\TextColumn::make('nama_mobil')->label('Nama Mobil')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('durasi')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('harga')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('bahan_bakar')->label('Bahan Bakar')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('tipe')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('seater')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('kategori')->searchable()->sortable(),
+                ImageColumn::make('image')->label('Image')->width(100)->searchable()->sortable()
             ])
             ->filters([
                 //

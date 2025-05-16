@@ -35,8 +35,8 @@ class AdminResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nama')->label('Nama Admin'),
-                Tables\Columns\TextColumn::make('no_telepon')->label('Nomor Telepon')
+                Tables\Columns\TextColumn::make('nama')->label('Nama Admin')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('no_telepon')->label('Nomor Telepon')->searchable()->sortable()
             ])
             ->filters([
                 //

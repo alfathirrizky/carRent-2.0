@@ -9,42 +9,42 @@
 </head>
 
 <body class="bg-white text-gray-900">
-    <x-navbar></x-navbar>
+    <x-navbar />
 
-    <section class="flex justify-center items-center flex-col gap-5 mt-10 mb-5">
-
-        <h1 class="text-4xl font-bold">Booking Car</h1>
+    <section class="flex flex-col items-center justify-center mt-16 mb-10 px-4">
+        <h1 class="text-4xl font-bold mb-6">Booking Car</h1>
 
         @if (session('success'))
-            <div class="text-green-500 font-bold">
+            <div class="text-green-600 font-semibold mb-4">
                 {{ session('success') }}
             </div>
         @endif
 
         <form method="POST" action="{{ route('booking.store') }}"
-            class="bookForm rounded-3xl bg-blue-700 w-full max-w-xl flex flex-col items-center p-8 gap-4">
+            class="bg-blue-700 rounded-3xl w-full max-w-xl p-8 flex flex-col gap-5 shadow-lg">
             @csrf
 
-            <div class="input w-full flex flex-col gap-2">
-                <label class="px-3 font-medium text-md text-white">Nama Lengkap</label>
-                <input class="w-full rounded-xl p-2" type="text" name="nama"
-                    placeholder="Tulis Nama Lengkap Anda">
+            <div class="flex flex-col gap-1">
+                <label class="text-white text-md font-semibold">Nama Lengkap</label>
+                <input class="rounded-xl p-2 text-gray-800" type="text" name="nama"
+                    placeholder="Tulis Nama Lengkap Anda" required>
             </div>
 
-            <div class="input w-full flex flex-col gap-2">
-                <label class="px-3 font-medium text-md text-white">Nomor Telepon</label>
-                <input class="w-full rounded-xl p-2" type="text" name="telepon" placeholder="0857xxxxxxx">
+            <div class="flex flex-col gap-1">
+                <label class="text-white text-md font-semibold">Nomor Telepon</label>
+                <input class="rounded-xl p-2 text-gray-800" type="text" name="telepon" placeholder="0857xxxxxxx"
+                    required>
             </div>
 
-            <div class="input w-full flex flex-col gap-2">
-                <label class="px-3 font-medium text-md text-white">Mobil</label>
-                <input class="w-full rounded-xl p-2" type="text" name="mobil" placeholder="Toyota Innova">
+            <div class="flex flex-col gap-1">
+                <label class="text-white text-md font-semibold">Mobil</label>
+                <input class="rounded-xl p-2 text-gray-800" type="text" name="mobil" placeholder="Toyota Innova"
+                    required>
             </div>
 
-            <div class="input w-full flex flex-col mb-4">
-                <label for="countries" class="block mb-2 px-3 text-md font-semibold text-white">Durasi</label>
-                <select id="jam" name="durasi"
-                    class="bg-gray-50 border border-gray-300 text-gray-500 text-md rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            <div class="flex flex-col gap-1">
+                <label class="text-white text-md font-semibold">Durasi</label>
+                <select name="durasi" class="rounded-xl p-2 text-gray-800 bg-white border border-gray-300" required>
                     <option>12 Jam</option>
                     <option>24 Jam</option>
                     <option>36 Jam</option>
@@ -53,20 +53,30 @@
                     <option>72 Jam</option>
                 </select>
             </div>
-            <div class="flex gap-3">
+
+            <div class="flex flex-col gap-1">
+                <label class="text-white text-md font-semibold">Metode Pembayaran</label>
+                <select name="metode_pembayaran" class="rounded-xl p-2 text-gray-800 bg-white border border-gray-300"
+                    required>
+                    <option>Cash</option>
+                    <option>QRIS</option>
+                </select>
+            </div>
+
+            <div class="flex justify-center gap-4 mt-4">
                 <a href="/cars"
-                    class="bg-white text-blue-700 px-10 py-2 text-xl font-semibold rounded-3xl hover:bg-gray-100">
+                    class="bg-white text-blue-700 px-6 py-2 text-lg font-semibold rounded-2xl hover:bg-gray-100 transition">
                     Cancel
                 </a>
                 <button type="submit"
-                    class="bg-white text-blue-700 px-10 py-2 text-xl font-semibold rounded-3xl hover:bg-gray-100">
+                    class="bg-white text-blue-700 px-6 py-2 text-lg font-semibold rounded-2xl hover:bg-gray-100 transition">
                     Book a car
                 </button>
             </div>
         </form>
     </section>
 
-    <x-footer></x-footer>
+    <x-footer />
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
