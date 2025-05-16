@@ -5,21 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Review</title>
+    <title>Form Testimoni</title>
     @vite('resources/css/app.css')
 </head>
 
 <body>
     <x-navbar></x-navbar>
-    <section class="m-5">
-        <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
-            <p class=" text-md text-center">bagus</p>
-            <div class="profile flex items-center gap-2">
-                <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
-                {{-- <img src="{{ url('img/inova.png') }}" alt="profile" srcset="" class="h-4 w-4 rounded-4xl">
-                --}}
-                <h1 class=" font-semibold">Alfathir</h1>
-            </div>
+    <section class="m-5 flex flex-col gap-10 items-center justify-center">
+        <div class="grid grid-cols-3 gap-4">
+            @foreach ($reviews as $review)
+                <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center shadow-xl">
+                    <p class=" text-md text-center">{{ $review->reviews }}</p>
+                    <div class="profile flex items-center gap-2">
+                        <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
+                        <h1 class=" font-semibold">{{ $review->nama }}</h1>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <div class="btn flex gap-5">
+            <a href="/" class="border-2 text-blue-800 text-center w-50 px-4 py-3 rounded-3xl">Back to home</a>
+            <a href="/testimoni" class="bg-blue-800 text-white text-center w-50 px-4 py-3 rounded-3xl">Share your journey!</a>
         </div>
     </section>
     <x-footer></x-footer>

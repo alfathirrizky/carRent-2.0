@@ -40,7 +40,7 @@
                     </div>
                     <div class=" flex justify-between">
                         <p class=" text-md font-medium">{{ $car['harga'] }}</p>
-                        <a href="{{ url('car detail') }}" class=" text-sm bg-blue-700 text-white text-md font-medium px-5 py-1 rounded-2xl">See Detail</a>
+                        <a href="/car detail/{{ $car['id'] }}" class=" text-sm bg-blue-700 text-white text-md font-medium px-5 py-1 rounded-2xl">See Detail</a>
                     </div>
                 </div>
             @endforeach

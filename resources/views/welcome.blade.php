@@ -125,8 +125,8 @@
                             </svg>What do i need to rent a car?</span>
                         <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 5 5 1 1 5" />
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M9 5 5 1 1 5" />
                         </svg>
                     </button>
                 </h2>
@@ -153,8 +153,8 @@
                             </svg> What do i need to rent a car?</span>
                         <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 5 5 1 1 5" />
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M9 5 5 1 1 5" />
                         </svg>
                     </button>
                 </h2>
@@ -189,8 +189,8 @@
             @foreach ($cars->take(4) as $car)
                 <div class="flex flex-col gap-5 bg-white rounded-2xl shadow-xl p-5">
                     <div class="flex items-center justify-center">
-                        <img class="w-70 h-50 object-contain" src="{{ asset('storage/' . $car->gambar_mobil) }}" alt=""
-                            srcset="">
+                        <img class="w-70 h-50 object-contain" src="{{ asset('storage/' . $car->gambar_mobil) }}"
+                            alt="" srcset="">
                     </div>
                     <div class="flex justify-between items-center">
                         <h1 class=" text-2xl font-bold">{{ $car['nama_mobil'] }}</h1>
@@ -213,9 +213,9 @@
                     </div>
                     <div class=" flex justify-between">
                         <p class=" text-md font-medium">{{ $car['harga'] }}</p>
-                        <button class=" text-sm bg-blue-700 text-white text-md font-medium px-5 py-1 rounded-2xl"> Book
-                            a
-                            car</button>
+                        <a href="/car detail/{{ $car['id'] }}"
+                            class=" text-sm bg-blue-700 text-white text-md font-medium px-5 py-1 rounded-2xl">See
+                            Detail</a>
                     </div>
                 </div>
             @endforeach
@@ -223,72 +223,26 @@
     </section>
     {{-- testimoni --}}
     <section id="testimoni" class="p-8 m-5 my-9 bg-blue-900 rounded-lg flex flex-col gap-5">
-<<<<<<< HEAD
-        <div class="text">
-            <div class="text flex justify-between items-end mb-4">
-                <div>
-                    <h1 class=" text-white font-semibold">Testimoni</h1>
-                    <h1 class="text-4xl text-white font-semibold">Customers review</h1>
-                </div>
-                <div>
-                    <a href="{{ url('/testimoni') }}" class="bg-white py-2 px-3 rounded-3xl font-medium text-sm">
-                        Share your journey!
-                    </a>
-=======
-        <div class="text flex justify-between items-end">
+        <div class="text flex items-end justify-between">
             <div>
-                <h1 class=" text-white font-semibold">Testimonials</h1>
-                <h1 class="text-4xl text-white font-semibold">Customers review</h1>
+                <h3 class="text-white text-lg font-semibold">Testimonials</h3>
+                <h1 class="text-white text-3xl font-bold">Customers review</h1>
             </div>
             <div>
-                <button class="bg-white py-2 px-3 rounded-3xl font-medium text-sm">
-                    Share your journey!
-                </button>
+                <a href="/review" class="bg-white px-4 py-1 rounded-2xl font-semibold">See All Review</a>
             </div>
         </div>
-        <div class="flex flex-row flex-wrap gap-3 md:flex-wrap">
-            <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
-                <h1 class=" font-semibold text-xl">Very easy this was to integrate</h1>
-                <p class=" text-md text-center">“If you care for your time, I hands down would go with this."</p>
-                <div class="profile flex items-center gap-2">
-                    <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
-                    {{-- <img src="{{ url('img/inova.png') }}" alt="profile" srcset="" class="h-4 w-4 rounded-4xl"> --}}
-                    <h1 class=" font-semibold">John Doe</h1>
->>>>>>> responsive-fe
-                </div>
-            </div>
-            <div class="flex flex-row flex-wrap gap-3 md:flex-wrap">
-                <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
-                    <h1 class=" font-semibold text-xl">Very easy this was to integrate</h1>
-                    <p class=" text-md text-center">“If you care for your time, I hands down would go with this."</p>
+        <div class="grid grid-cols-3 gap-4">
+            @foreach ($reviews as $review)
+                <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center shadow-xl">
+                    <p class=" text-md text-center">{{ $review->reviews }}</p>
                     <div class="profile flex items-center gap-2">
                         <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
-                        {{-- <img src="{{ url('img/inova.png') }}" alt="profile" srcset="" class="h-4 w-4 rounded-4xl">
-                        --}}
-                        <h1 class=" font-semibold">John Doe</h1>
+                        <h1 class=" font-semibold">{{ $review->nama }}</h1>
                     </div>
                 </div>
-                <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
-                    <h1 class=" font-semibold text-xl">Very easy this was to integrate</h1>
-                    <p class=" text-md text-center">“If you care for your time, I hands down would go with this."</p>
-                    <div class="profile flex items-center gap-2">
-                        <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
-                        {{-- <img src="{{ url('img/inova.png') }}" alt="profile" srcset="" class="h-4 w-4 rounded-4xl">
-                        --}}
-                        <h1 class=" font-semibold">John Doe</h1>
-                    </div>
-                </div>
-                <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center">
-                    <h1 class=" font-semibold text-xl">Very easy this was to integrate</h1>
-                    <p class=" text-md text-center">“If you care for your time, I hands down would go with this."</p>
-                    <div class="profile flex items-center gap-2">
-                        <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
-                        {{-- <img src="{{ url('img/inova.png') }}" alt="profile" srcset="" class="h-4 w-4 rounded-4xl">
-                        --}}
-                        <h1 class=" font-semibold">John Doe</h1>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+        </div>
     </section>
     <x-footer></x-footer>
     <script>
@@ -297,7 +251,7 @@
 
         // Change the icons inside the button based on previous settings
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
-            '(prefers-color-scheme: dark)').matches)) {
+                '(prefers-color-scheme: dark)').matches)) {
             themeToggleLightIcon.classList.remove('hidden');
         } else {
             themeToggleDarkIcon.classList.remove('hidden');
@@ -305,7 +259,7 @@
 
         var themeToggleBtn = document.getElementById('theme-toggle');
 
-        themeToggleBtn.addEventListener('click', function () {
+        themeToggleBtn.addEventListener('click', function() {
 
             // toggle icons inside button
             themeToggleDarkIcon.classList.toggle('hidden');
