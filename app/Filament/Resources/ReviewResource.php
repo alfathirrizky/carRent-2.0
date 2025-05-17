@@ -2,16 +2,16 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ReviewResource\Pages;
-use App\Filament\Resources\ReviewResource\RelationManagers;
-use App\Models\Review;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Review;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\ReviewResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\ReviewResource\RelationManagers;
 
 class ReviewResource extends Resource
 {
@@ -31,8 +31,8 @@ class ReviewResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nama')->label('Nama Customer'),
-                Tables\Columns\TextColumn::make('reviews')->label('Review Customer'),
+                Tables\Columns\TextColumn::make('nama')->label('Nama Customer')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('reviews')->label('Review Customer')->searchable()->sortable(),
             ])
             ->filters([
                 //

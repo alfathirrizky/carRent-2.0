@@ -17,6 +17,7 @@ return new class extends Migration
         $table->string('telepon');
         $table->string('mobil');
         $table->string('durasi');
+        $table->enum('metode_pembayaran', ['Cash', 'QRIS']);
         $table->timestamps();
     });
     }
