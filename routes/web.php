@@ -4,7 +4,7 @@ use App\Models\Admin;
 use App\Models\Car;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
-use App\Http\Controllers\TestimoniController;
+use App\Http\Controllers\ReviewController;
 use App\Models\Review;
 
 Route::get('/', function () {
@@ -46,4 +46,6 @@ Route::get('/testimoni', function () {
 
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 
-Route::post('/testimoni', [TestimoniController::class, 'store'])->name('testimoni.store');
+Route::post('/testimoni', [ReviewController::class, 'store'])->name('testimoni.store');
+
+Route::get('/reviewpage', [ReviewController::class, 'index'])->name('review.index');
