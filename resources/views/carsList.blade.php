@@ -38,8 +38,7 @@
                             <p class="text-xs">{{ $car['tipe'] }}</p>
                         </div>
                     </div>
-                    <div class=" flex justify-between">
-                        <p class=" text-md font-medium">{{ $car['harga'] }}</p>
+                    <div class=" flex justify-end">
                         <a href="/car detail/{{ $car['id'] }}" class=" text-sm bg-blue-700 text-white text-md font-medium px-5 py-1 rounded-2xl">See Detail</a>
                     </div>
                 </div>

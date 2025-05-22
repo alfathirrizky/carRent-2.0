@@ -27,6 +27,7 @@ class AdminResource extends Resource
                 ->schema([
                 Forms\Components\TextInput::make('nama')->label('Nama Admin')->placeholder('Isi Nama')->required(),
                 Forms\Components\TextInput::make('no_telepon')->label('Nomor Telepon')->placeholder('Isi Nomor Telepon')->required(),
+                Forms\Components\TextInput::make('link_whatsapp')->label('Link')->placeholder('Isi Link Whatsapp')->required(),
             ])
         ]);
     }
@@ -36,7 +37,8 @@ class AdminResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('nama')->label('Nama Admin')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('no_telepon')->label('Nomor Telepon')->searchable()->sortable()
+                Tables\Columns\TextColumn::make('no_telepon')->label('Nomor Telepon')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('link_whatsapp')->label('Link')->searchable()->sortable()
             ])
             ->filters([
                 //

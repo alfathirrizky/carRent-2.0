@@ -12,10 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cars', function (Blueprint $table) {
-            $table->id('id');
+            $table->id();
             $table->string('nama_mobil');
-            $table->enum('durasi', ['12 Jam', '24 Jam', '36 Jam', '48 Jam', '60 Jam', '72 Jam']);
-            $table->string('harga');
             $table->enum('bahan_bakar', ['Bensin', 'Diesel']);
             $table->enum('tipe', ['Matic', 'Manual']);
             $table->enum('seater', ['5 Seater', '7 Seater']);

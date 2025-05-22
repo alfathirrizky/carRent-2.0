@@ -21,7 +21,7 @@
                         <p class=" font-medium">{{ $admin['no_telepon'] }}1</p>
                     </div>
                 </div>
-                <button class=" bg-blue-700 p-2 px-7 rounded-4xl text-white">chat admin</button>
+                <a href="{{ $admin['link_whatsapp'] }}" class=" bg-blue-700 p-2 px-7 rounded-4xl text-white">chat admin</a>
             </div>
         @endforeach
     </section>

@@ -38,7 +38,7 @@
                     placeholder="Ceritakan pengalaman anda..."></textarea>
             </div>
             <button type="submit"
-                class="bg-white text-blue-700 px-10 py-2 text-xl font-semibold rounded-3xl hover:bg-gray-100">
+                class="bg-white text-blue-700 px-10 py-2 text-xl font-semibold rounded-3xl hover:bg-gray-100 cursor-pointer">
                 Submit Review
             </button>
         </form>

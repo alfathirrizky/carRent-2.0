@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>car rent</title>
     @vite('resources/css/app.css')
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body>
@@ -211,8 +212,7 @@
                             <p class="text-xs">{{ $car['tipe'] }}</p>
                         </div>
                     </div>
-                    <div class=" flex justify-between">
-                        <p class=" text-md font-medium">{{ $car['harga'] }}</p>
+                    <div class=" flex justify-end">
                         <a href="/car detail/{{ $car['id'] }}"
                             class=" text-sm bg-blue-700 text-white text-md font-medium px-5 py-1 rounded-2xl">See
                             Detail</a>
@@ -233,17 +233,43 @@
             </div>
         </div>
         <div class="grid grid-cols-3 gap-4">
-            @foreach ($reviews as $review)
+            @foreach ($reviews->take(3) as $review)
                 <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center shadow-xl">
                     <p class=" text-md text-center">{{ $review->reviews }}</p>
                     <div class="profile flex items-center gap-2">
-                        <div class=" h-8 w-8 bg-blue-900 rounded-4xl"></div>
                         <h1 class=" font-semibold">{{ $review->nama }}</h1>
                     </div>
                 </div>
             @endforeach
         </div>
     </section>
+    @if (session('success'))
+        <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 4000)" x-show="show"
+            x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-2"
+            class="fixed top-4 right-4 z-50 max-w-sm w-full bg-green-500 text-white rounded-xl shadow-lg overflow-hidden">
+            <div class="flex items-start p-4">
+                <!-- Icon -->
+                <svg class="w-6 h-6 mr-3 mt-1 text-white shrink-0" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+
+                <!-- Message -->
+                <div class="flex-1 text-sm">
+                    <p class="font-semibold text-base">Booking berhasil disimpan</p>
+                    <p class="text-sm">Admin akan menghubungi nomor Anda.</p>
+                </div>
+                <!-- Close Button -->
+                <button @click="show = false" class="ml-4 text-white hover:text-gray-200 focus:outline-none">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    @endif
     <x-footer></x-footer>
     <script>
         var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');

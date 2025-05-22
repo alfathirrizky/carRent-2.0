@@ -17,12 +17,14 @@ class BookingController extends Controller
             'telepon' => 'required|string|max:20',
             'mobil' => 'required|string|max:100',
             'durasi' => 'required|string|max:50',
+            'metode_pembayaran' => 'required|in:cash,transfer',
+            'tanggal_booking' => 'required|date'
         ]);
 
         // Simpan ke database
         Booking::create($validated);
 
         // Redirect dengan pesan sukses
-        return redirect()->back()->with('success', 'Booking berhasil disimpan!');
+        return redirect('/')->with('success', true);
     }
 }

@@ -2,18 +2,20 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\CarResource\Pages;
-use App\Filament\Resources\CarResource\RelationManagers;
+
 use App\Models\Car;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\ImageColumn;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\CarResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\CarResource\RelationManagers\PricesRelationManager;
+
 
 class CarResource extends Resource
 {
@@ -30,15 +32,6 @@ class CarResource extends Resource
                 Forms\Components\Card::make()
                     ->schema([
                         Forms\Components\TextInput::make('nama_mobil')->placeholder('Contoh: Toyota Innova')->label('Nama Mobil')->required(),
-                        Forms\Components\Select::make('durasi')->options([
-                            '12 Jam' => '12 Jam',
-                            '24 Jam' => '24 Jam',
-                            '36 Jam' => '36 Jam',
-                            '48 Jam' => '48 Jam',
-                            '60 Jam' => '60 Jam',
-                            '72 Jam' => '72 Jam'
-                        ])->placeholder('Pilih Durasi')->required(),
-                        Forms\Components\TextInput::make('harga')->placeholder('Contoh: Rp 1.000.000')->required(),
                         Forms\Components\Select::make('bahan_bakar')->options([
                             'Bensin' => 'Bensin',
                             'Diesel' => 'Diesel'
@@ -66,16 +59,25 @@ class CarResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('nama_mobil')->label('Nama Mobil')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('durasi')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('harga')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('prices_count')
+                    ->label('Jumlah Harga')
+                    ->counts('prices')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('bahan_bakar')->label('Bahan Bakar')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('tipe')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('seater')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('kategori')->searchable()->sortable(),
-                ImageColumn::make('image')->label('Image')->width(100)->searchable()->sortable()
+                Tables\Columns\ImageColumn::make('gambar_mobil')->label('Image')->visibility('public')->square()->width(100)->searchable()->sortable()
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('kategori')
+                    ->label('Kategori')
+                    ->options([
+                        'MPV' => 'MPV',
+                        'SUV' => 'SUV',
+                        'HATCHBACK' => 'HATCHBACK',
+                    ])
+                    ->placeholder('Semua Kategori')
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -91,7 +93,7 @@ class CarResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            PricesRelationManager::class,
         ];
     }
 

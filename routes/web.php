@@ -1,11 +1,12 @@
 <?php
 
-use App\Models\Admin;
 use App\Models\Car;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BookingController;
-use App\Http\Controllers\ReviewController;
+use App\Models\Admin;
 use App\Models\Review;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CarController;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\BookingController;
 
 Route::get('/', function () {
     return view('welcome', ['title' => 'car list', 'cars' => Car::all(), 'reviews' => Review::all()]);
@@ -19,6 +20,11 @@ Route::get('/cars', function () {
     return view('carsList', ['title' => 'car detail', 'cars' => Car::all()]);
 });
 
+Route::get('/car detail/{id}', function ($id) {
+    $car = Car::find($id);
+    return view('carDetail', ['car' => $car]);
+});
+
 Route::get('/contact us', function () {
     return view('contactUs', ['title' => 'contact us', 'admins' => Admin::all()]);
 });
@@ -27,10 +33,6 @@ Route::get('/location', function () {
     return view('location');
 });
 
-Route::get('/car detail/{id}', function ($id) {
-    $car = Car::find($id);
-    return view('carDetail', ['car' => $car]);
-});
 
 Route::get('/booking', function () {
     return view('bookingPage');
@@ -49,3 +51,7 @@ Route::post('/booking', [BookingController::class, 'store'])->name('booking.stor
 Route::post('/testimoni', [ReviewController::class, 'store'])->name('testimoni.store');
 
 Route::get('/reviewpage', [ReviewController::class, 'index'])->name('review.index');
+
+Route::get('/cars', [CarController::class, 'index'])->name('cars.index');
+
+Route::get('/cars/{id}', [CarController::class, 'show'])->name('cars.show');

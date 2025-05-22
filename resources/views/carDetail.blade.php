@@ -32,31 +32,19 @@
         <table class="table-auto w-2xl border-solid mb-8">
             <thead class=" bg-blue-700 text-white border border-solid border-black">
                 <tr>
-                    <th class="border border-solid border-black text-xl">Price</th>
                     <th class="border border-solid border-black text-xl">Duration</th>
+                    <th class="border border-solid border-black text-xl">Price</th>
                 </tr>
             </thead>
             <tbody class="border border-solid border-black">
-                <tr>
-                    <td class="border border-solid border-black text-center text-xl">Rp.300.000</td>
-                    <td class="border border-solid border-black text-center text-xl">12 Jam</td>
-                </tr>
-                <tr>
-                    <td class="border border-solid border-black text-center text-xl">Rp.1.000.000</td>
-                    <td class="border border-solid border-black text-center text-xl">24 Jam</td>
-                </tr>
-                <tr>
-                    <td class="border border-solid border-black text-center text-xl">Rp.1.300.000</td>
-                    <td class="border border-solid border-black text-center text-xl">36 Jam</td>
-                </tr>
-                <tr>
-                    <td class="border border-solid border-black text-center text-xl">Rp.2.000.000</td>
-                    <td class="border border-solid border-black text-center text-xl">48 Jam</td>
-                </tr>
-                <tr>
-                    <td class="border border-solid border-black text-center text-xl">Rp.2.300.000</td>
-                    <td class="border border-solid border-black text-center text-xl">60 Jam</td>
-                </tr>
+                @foreach ($car->prices as $price)
+                    <tr>
+                        <td class="border border-solid border-black text-center text-xl">{{ $price->durasi }}</td>
+                        <td class="border border-solid border-black text-center text-xl">
+                            Rp. {{ number_format($price->harga, 0, ',', '.') }}
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
         <div class="flex gap-5">
