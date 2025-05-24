@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Car;
 use App\Models\Booking;
+use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
@@ -26,5 +27,10 @@ class BookingController extends Controller
 
         // Redirect dengan pesan sukses
         return redirect('/')->with('success', true);
+    }
+    public function create($id)
+    {
+        $car = Car::findOrFail($id);
+        return view('bookingPage', compact('car'));
     }
 }

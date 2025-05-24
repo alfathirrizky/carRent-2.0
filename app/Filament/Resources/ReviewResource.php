@@ -31,8 +31,8 @@ class ReviewResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nama')->label('Nama Customer')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('reviews')->label('Review Customer')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('nama')->label('Nama Customer')->searchable(),
+                Tables\Columns\TextColumn::make('reviews')->label('Review Customer')->searchable(),
             ])
             ->filters([
                 //

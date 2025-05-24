@@ -33,7 +33,6 @@ Route::get('/location', function () {
     return view('location');
 });
 
-
 Route::get('/booking', function () {
     return view('bookingPage');
 });
@@ -54,4 +53,6 @@ Route::get('/reviewpage', [ReviewController::class, 'index'])->name('review.inde
 
 Route::get('/cars', [CarController::class, 'index'])->name('cars.index');
 
-Route::get('/cars/{id}', [CarController::class, 'show'])->name('cars.show');
+Route::get('/booking/{id}', [BookingController::class, 'create']);
+
+Route::get('/booking/{id}', [BookingController::class, 'create'])->name('booking.create');

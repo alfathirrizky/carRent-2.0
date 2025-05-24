@@ -11,7 +11,7 @@
 
 <body>
     <x-navbar></x-navbar>
-    <section class="flex flex-col items-center justify-center my-10">
+    <section class="flex flex-col items-center justify-center mt-30">
         <img class=" w-lg md:w-md sm:w-xs" src="{{ asset('storage/' . $car->gambar_mobil) }}" alt=""
             srcset="">
         <h1 class=" text-4xl font-bold mb-10 md:text-3xl">{{ $car['nama_mobil'] }}</h1>
@@ -50,7 +50,7 @@
         <div class="flex gap-5">
             <a href="/cars"
                 class="px-25 py-1 border-2 border-blue-700 rounded-4xl text-xl text-blue-700 font-bold">Back</a>
-            <a href="/booking"
+            <a href="{{ route('booking.create', ['id' => $car->id]) }}"
                 class="px-25 py-1 border-2 bg-blue-700 border-blue-700 rounded-4xl text-xl text-white font-bold">Book a
                 car</a>
         </div>

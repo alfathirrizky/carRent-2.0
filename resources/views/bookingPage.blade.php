@@ -12,7 +12,7 @@
     <body class="bg-white text-gray-900">
         <x-navbar />
 
-        <section class="flex flex-col items-center justify-center mt-16 mb-10 px-4">
+        <section class="flex flex-col items-center justify-center mt-20 mb-10 px-4">
             <h1 class="text-4xl font-bold mb-6">Booking Car</h1>
 
             {{-- @if (session('success'))
@@ -40,12 +40,11 @@
 
                 <div class="flex flex-col gap-1">
                     <label class="text-white text-md font-semibold">Mobil</label>
-                    <input class="rounded-xl p-2 text-gray-800" type="text" name="mobil" placeholder="Toyota Innova"
-                        required>
+                    <input type="text" name="mobil" class="rounded-xl p-2 text-gray-800" value="{{ $car->nama_mobil }}" readonly>
                 </div>
                 <div class="flex flex-col gap-1">
-                    <label class="text-white text-md font-semibold">Tangga Booking</label>
-                    <input class="rounded-xl p-2 text-gray-800" type="date" name="tanggal"
+                    <label class="text-white text-md font-semibold">Tanggal Booking</label>
+                    <input class="rounded-xl p-2 text-gray-800" type="date" name="tanggal_booking"
                         required>
                 </div>
 

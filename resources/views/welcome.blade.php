@@ -57,7 +57,7 @@
                         dalam kondisi prima dan rutin diservis.</p>
                 </div>
             </div>
-            <div class="content relative w-40 bg-blue-900 rounded-3xl flex flex-col justify-between py-10 gap-10">
+            <div class="content w-40 bg-blue-900 rounded-3xl flex flex-col justify-between py-10 gap-10">
                 <img class="w-2xl" src="{{ url('img/inova.png') }}" alt="" srcset="">
                 <img src="{{ url('img/jazz.png') }}" alt="" srcset="">
             </div>

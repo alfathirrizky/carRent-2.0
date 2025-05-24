@@ -57,16 +57,16 @@ class CarResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nama_mobil')->label('Nama Mobil')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('nama_mobil')->label('Nama Mobil')->searchable(),
                 Tables\Columns\TextColumn::make('prices_count')
                     ->label('Jumlah Harga')
                     ->counts('prices')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('bahan_bakar')->label('Bahan Bakar')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('tipe')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('bahan_bakar')->label('Bahan Bakar')->searchable(),
+                Tables\Columns\TextColumn::make('tipe')->searchable(),
                 Tables\Columns\TextColumn::make('seater')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('kategori')->searchable()->sortable(),
-                Tables\Columns\ImageColumn::make('gambar_mobil')->label('Image')->square()->width(110)->height(55)->searchable()->sortable()->visibility('public')->disk('public')
+                Tables\Columns\TextColumn::make('kategori')->searchable(),
+                Tables\Columns\ImageColumn::make('gambar_mobil')->label('Image')->square()->width(110)->height(55)->searchable()->visibility('public')->disk('public')
 
             ])
             ->filters([

@@ -11,7 +11,7 @@
 
 <body>
     <x-navbar></x-navbar>
-    <section class="m-5 gap-5 flex-wrap ">
+    <section class="m-5 gap-5 flex-wrap pt-20">
         <div class="grid grid-cols-4 gap-4">
             @foreach ($cars as $car)
                 <div class="flex flex-col gap-5 bg-white rounded-2xl shadow-xl p-5">
