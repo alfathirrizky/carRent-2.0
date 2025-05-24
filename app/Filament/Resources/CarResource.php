@@ -20,7 +20,6 @@ use App\Filament\Resources\CarResource\RelationManagers\PricesRelationManager;
 class CarResource extends Resource
 {
     protected static ?string $model = Car::class;
-
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel = 'Cars Details';
     protected static ?string $modelLabel = 'Cars Details';
@@ -67,7 +66,8 @@ class CarResource extends Resource
                 Tables\Columns\TextColumn::make('tipe')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('seater')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('kategori')->searchable()->sortable(),
-                Tables\Columns\ImageColumn::make('gambar_mobil')->label('Image')->visibility('public')->square()->width(100)->searchable()->sortable()
+                Tables\Columns\ImageColumn::make('gambar_mobil')->label('Image')->square()->width(110)->height(55)->searchable()->sortable()->visibility('public')->disk('public')
+
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('kategori')
