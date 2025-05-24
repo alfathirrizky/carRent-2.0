@@ -20,7 +20,7 @@ use App\Filament\Resources\CarResource\RelationManagers\PricesRelationManager;
 class CarResource extends Resource
 {
     protected static ?string $model = Car::class;
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'untitledui-car';
     protected static ?string $navigationLabel = 'Cars Details';
     protected static ?string $modelLabel = 'Cars Details';
 
@@ -104,5 +104,13 @@ class CarResource extends Resource
             'create' => Pages\CreateCar::route('/create'),
             'edit' => Pages\EditCar::route('/{record}/edit'),
         ];
+    }
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
+    public static function getNavigationBadgeTooltip(): ?string
+    {
+        return 'The number of cars';
     }
 }

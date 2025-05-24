@@ -23,6 +23,7 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+            ->brandLogo(fn() => view('components.branding'))
             ->default()
             ->id('admin')
             ->path('admin')

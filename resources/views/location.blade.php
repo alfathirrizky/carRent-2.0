@@ -11,7 +11,7 @@
 
 <body>
     <x-navbar></x-navbar>
-    <section class=" flex flex-col items-center">
+    <section class=" flex flex-col items-center pt-20">
         <h1 class=" text-4xl font-bold text-blue-700">Our Location</h1>
         <p class=" font-medium mb-5">Jl.Ahmad ausyah maulana</p>
         <div class=" bg-blue-700 w-4xl h-96 mb-7 rounded-2xl">
