@@ -11,7 +11,7 @@
 
 <body>
     <x-navbar></x-navbar>
-    <section class="m-5 flex flex-col gap-10 justify-center">
+    <section class="m-5 flex flex-col gap-10 justify-center pt-20">
         <div class="grid grid-cols-3 gap-4">
             @foreach ($reviews as $review)
                 <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center shadow-xl">

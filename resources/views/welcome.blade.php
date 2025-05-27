@@ -8,6 +8,7 @@
     <title>car rent</title>
     @vite('resources/css/app.css')
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     {{-- jumbo tron --}}
     <section class="bg-center bg-no-repeat bg-[url('/public/img/hero.png')] p-20">
         <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-            <h1 class="mb-4 text-5xl font-extrabold tracking-tight leading-none text-white xs:text-3xl lg:text-5xl">
+            <h1 class="mb-4 text-5xl font-extrabold tracking-tight leading-none text-white xs:text-xl lg:text-5xl">
                 Looking to save more on
                 your rental car?</h1>
             <p class="mb-8 text-xl font-normal text-gray-300 xs:text-sm lg:text-xl">Lorem ipsum dolor
@@ -43,7 +44,7 @@
     <section id="chooseUs" class="flex flex-col items-center justify-center m-8 gap-6">
         <h1 class="text-4xl font-bold">Why choose us</h1>
         <div class="flex flex-row xs:flex-col lg:flex-row">
-            <div class="text1 w-xl flex flex-col justify-start py-10 gap-15">
+            <div class="text1 w-xl flex flex-col justify-start py-10 gap-15" data-aos="fade-right">
                 <div>
                     <h2 class=" text-xl font-bold">Armada Terawat & Beragam</h2>
                     <p>Kami menyediakan berbagai jenis kendaraan, mulai dari city car hingga kendaraan premium, yang
@@ -58,10 +59,10 @@
                 </div>
             </div>
             <div class="content w-40 bg-blue-900 rounded-3xl flex flex-col justify-between py-10 gap-10">
-                <img class="w-2xl" src="{{ url('img/inova.png') }}" alt="" srcset="">
-                <img src="{{ url('img/jazz.png') }}" alt="" srcset="">
+                <img class="w-2xl" src="{{ url('img/inova.png') }}" alt="" srcset="" data-aos="zoom-in">
+                <img src="{{ url('img/jazz.png') }}" alt="" srcset=""data-aos="zoom-in">
             </div>
-            <div class="text2 w-xl flex flex-col justify-start py-10 gap-15 text-right">
+            <div class="text2 w-xl flex flex-col justify-start py-10 gap-15 text-right" data-aos="fade-left">
                 <div>
                     <h2 class=" text-xl font-bold">Armada Terawat & Beragam</h2>
                     <p>Kami menyediakan berbagai jenis kendaraan, mulai dari city car hingga kendaraan premium, yang
@@ -81,7 +82,7 @@
     <section id="question" class=" m-5 my-10 flex flex-row justify-center items-center gap-20 flex-wrap md:flex-wrap">
         <div class="img">
             <div class=" bg-blue-900 w-2xl h-96 rounded-3xl flex items-center">
-                <img src="{{ url('img/fortuner.png') }}" alt="" srcset="" class=" ml-20">
+                <img src="{{ url('img/fortuner.png') }}" alt="" srcset="" class=" ml-20" data-aos="fade-left" data-aos-duration="1000">
             </div>
         </div>
         <div class="textContent w-2xl flex flex-col justify-center">
@@ -271,50 +272,11 @@
         </div>
     @endif
     <x-footer></x-footer>
-    <script>
-        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-
-        // Change the icons inside the button based on previous settings
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
-                '(prefers-color-scheme: dark)').matches)) {
-            themeToggleLightIcon.classList.remove('hidden');
-        } else {
-            themeToggleDarkIcon.classList.remove('hidden');
-        }
-
-        var themeToggleBtn = document.getElementById('theme-toggle');
-
-        themeToggleBtn.addEventListener('click', function() {
-
-            // toggle icons inside button
-            themeToggleDarkIcon.classList.toggle('hidden');
-            themeToggleLightIcon.classList.toggle('hidden');
-
-            // if set via local storage previously
-            if (localStorage.getItem('color-theme')) {
-                if (localStorage.getItem('color-theme') === 'light') {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                }
-
-                // if NOT set via local storage previously
-            } else {
-                if (document.documentElement.classList.contains('dark')) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                }
-            }
-
-        });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

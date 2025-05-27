@@ -11,7 +11,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Car extends Model
 {
     use HasFactory;
-    protected $fillable = ['nama_mobil', 'durasi', 'harga', 'bahan_bakar', 'tipe', 'seater', 'kategori', 'gambar_mobil'];
+    protected $fillable = [
+        'nama_mobil',
+        'durasi',
+        'harga',
+        'bahan_bakar',
+        'tipe',
+        'seater',
+        'kategori',
+        'gambar_mobil'
+    ];
+
     public function prices(): HasMany
     {
         return $this->hasMany(Price::class);

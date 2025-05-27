@@ -37,10 +37,10 @@ class BookingResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('nama')->label('Nama Customer')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('telepon')->label('Nomor Telepon Customer')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('mobil')->label('Nama Mobil')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('mobil')->label('Nama Mobil')->searchable(),
                 Tables\Columns\TextColumn::make('tanggal_booking')->label('Tanggal Booking')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('durasi')->label('Durasi Booking')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('metode_pembayaran')->label('Metode Pembayaran')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('metode_pembayaran')->label('Metode Pembayaran')->searchable(),
             ])
             ->filters([
                 Filter::make('created_at')

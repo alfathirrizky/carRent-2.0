@@ -10,7 +10,10 @@ class Price extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['durasi', 'harga'];
+    protected $fillable = [
+        'durasi',
+        'harga'
+    ];
 
     public function car(): BelongsTo
     {
