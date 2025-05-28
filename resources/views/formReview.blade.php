@@ -11,7 +11,7 @@
 
 <body>
     <x-navbar></x-navbar>
-    <section class="flex justify-center items-center flex-col gap-5 mt-10 mb-5">
+    <section class="flex justify-center items-center flex-col gap-5 mt-10 mb-5 p-9">
 
         <h1 class="text-4xl font-bold">Share your journey!</h1>
 
