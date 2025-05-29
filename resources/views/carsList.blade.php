@@ -11,8 +11,8 @@
 
 <body>
     <x-navbar></x-navbar>
-    <section class="m-5 gap-5 flex-wrap pt-20">
-        <div class="grid grid-cols-4 gap-4">
+    <section class="m-5 flex-wrap pt-20">
+        <div class="grid grid-rows gap-4 md:grid-cols-2 lg:grid-cols-4">
             @foreach ($cars as $car)
                 <div class="flex flex-col gap-5 bg-white rounded-2xl shadow-xl p-5">
                     <div class="flex items-center justify-center">
@@ -39,7 +39,9 @@
                         </div>
                     </div>
                     <div class=" flex justify-end">
-                        <a href="/car detail/{{ $car['id'] }}" class=" text-sm bg-blue-700 text-white text-md font-medium px-5 py-1 rounded-2xl">See Detail</a>
+                        <a href="/car detail/{{ $car['id'] }}"
+                            class=" text-sm bg-blue-700 text-white text-md font-medium px-5 py-1 rounded-2xl">See
+                            Detail</a>
                     </div>
                 </div>
             @endforeach

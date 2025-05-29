@@ -16,10 +16,10 @@
     {{-- jumbo tron --}}
     <section class="bg-center bg-no-repeat bg-[url('/public/img/hero.png')] p-20">
         <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-            <h1 class="mb-4 text-5xl font-extrabold tracking-tight leading-none text-white xs:text-xl lg:text-5xl">
+            <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white lg:text-5xl">
                 Looking to save more on
                 your rental car?</h1>
-            <p class="mb-8 text-xl font-normal text-gray-300 xs:text-sm lg:text-xl">Lorem ipsum dolor
+            <p class="mb-8 text-sm font-normal text-gray-300 md:text-lg lg:text-2xl">Lorem ipsum dolor
                 sit amet consectetur adipisicing elit. Aperiam, quidem repellendus voluptas necessitatibus perspiciatis,
                 error quae minima commodi sit labore iste sed. Natus voluptatem quas
             </p>
@@ -41,7 +41,7 @@
         </div>
     </section>
     {{-- why choose us --}}
-    <section id="chooseUs" class="flex flex-col items-center justify-center m-8 gap-6">
+    {{-- <section id="chooseUs" class="flex flex-col items-center justify-center m-8 gap-6">
         <h1 class="text-4xl font-bold">Why choose us</h1>
         <div class="flex flex-row xs:flex-col lg:flex-row">
             <div class="text1 w-xl flex flex-col justify-start py-10 gap-15" data-aos="fade-right">
@@ -77,105 +77,109 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     {{-- frequently asked --}}
-    <section id="question" class=" m-5 my-10 flex flex-row justify-center items-center gap-20 flex-wrap md:flex-wrap">
+    <section id="question" class="my-10 flex flex-col justify-center items-center gap-10 md:flex-row lg:gap-25">
         <div class="img">
-            <div class=" bg-blue-900 w-2xl h-96 rounded-3xl flex items-center">
-                <img src="{{ url('img/fortuner.png') }}" alt="" srcset="" class=" ml-20" data-aos="fade-left" data-aos-duration="1000">
+            <div class=" bg-blue-900 w-md py-5 rounded-3xl flex items-center lg:w-2xl">
+                <img src="{{ url('img/fortuner.png') }}" alt="" srcset="" class="w-sm ml-20 lg:w-2xl">
             </div>
         </div>
-        <div class="textContent w-2xl flex flex-col justify-center">
-            <h1 class=" text-blue-700 font-bold">Frequently asked questions</h1>
-            <h1 class=" text-4xl font-bold w-xl">Everything you need to know about our services</h1>
-            <div id="accordion-open" data-accordion="open" class=" mt-7">
-                <h2 id="accordion-open-heading-1">
-                    <button type="button"
-                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 gap-3"
-                        data-accordion-target="#accordion-open-body-1" aria-expanded="true"
-                        aria-controls="accordion-open-body-1">
-                        <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                                    clip-rule="evenodd"></path>
-                            </svg>What do i need to rent a car?</span>
-                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 5 5 1 1 5" />
-                        </svg>
-                    </button>
-                </h2>
-                <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
-                    <div class="p-5 border border-b-0 border-gray-200">
-                        <p class="mb-2 text-gray-500">Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Minus, impedit. Sed laborum sint enim pariatur consectetur quibusdam omnis
-                            ex nulla eveniet possimus mollitia rem fuga delectus veniam eius at soluta, error</p>
+        <div class="textContent flex flex-col items-center justify-center">
+            <div class=" text-center md:text-start">
+                <h1 class=" text-blue-700 text-lg font-bold">Frequently asked questions</h1>
+                <h1 class=" text-xl font-bold w-xl mb-4">Everything you need to know about our services</h1>
+            </div>
+            <div>     
+                <div id="accordion-open" data-accordion="open" class="w-md items-center lg:w-xl">
+                    <h2 id="accordion-open-heading-1">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 gap-3"
+                            data-accordion-target="#accordion-open-body-1" aria-expanded="true"
+                            aria-controls="accordion-open-body-1">
+                            <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                        clip-rule="evenodd"></path>
+                                </svg>What do i need to rent a car?</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5 5 1 1 5" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
+                        <div class="p-5 border border-b-0 border-gray-200">
+                            <p class="mb-2 text-gray-500">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Minus, impedit. Sed laborum sint enim pariatur consectetur quibusdam omnis
+                                ex nulla eveniet possimus mollitia rem fuga delectus veniam eius at soluta, error</p>
+                        </div>
                     </div>
-                </div>
-                <h2 id="accordion-open-heading-2">
-                    <button type="button"
-                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 gap-3"
-                        data-accordion-target="#accordion-open-body-2" aria-expanded="false"
-                        aria-controls="accordion-open-body-2">
-                        <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                                    clip-rule="evenodd"></path>
-                            </svg>What do i need to rent a car?</span>
-                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" d="M9 5 5 1 1 5" />
-                        </svg>
-                    </button>
-                </h2>
-                <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
-                    <div class="p-5 border border-b-0 border-gray-200">
-                        <p class="mb-2 text-gray-500">Flowbite is first conceptualized and designed
-                            using the Figma software so everything you see in the library has a design equivalent in our
-                            Figma file.</p>
-                        <p class="text-gray-500">Check out the <a href="https://flowbite.com/figma/"
-                                class="text-blue-600 hover:underline">Figma design system</a> based
-                            on the utility classes from Tailwind CSS and components from Flowbite.</p>
+                    <h2 id="accordion-open-heading-2">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 gap-3"
+                            data-accordion-target="#accordion-open-body-2" aria-expanded="false"
+                            aria-controls="accordion-open-body-2">
+                            <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                        clip-rule="evenodd"></path>
+                                </svg>What do i need to rent a car?</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
+                        <div class="p-5 border border-b-0 border-gray-200">
+                            <p class="mb-2 text-gray-500">Flowbite is first conceptualized and designed
+                                using the Figma software so everything you see in the library has a design equivalent in our
+                                Figma file.</p>
+                            <p class="text-gray-500">Check out the <a href="https://flowbite.com/figma/"
+                                    class="text-blue-600 hover:underline">Figma design system</a> based
+                                on the utility classes from Tailwind CSS and components from Flowbite.</p>
+                        </div>
                     </div>
-                </div>
-                <h2 id="accordion-open-heading-3">
-                    <button type="button"
-                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 gap-3"
-                        data-accordion-target="#accordion-open-body-3" aria-expanded="false"
-                        aria-controls="accordion-open-body-3">
-                        <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                                    clip-rule="evenodd"></path>
-                            </svg> What do i need to rent a car?</span>
-                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" d="M9 5 5 1 1 5" />
-                        </svg>
-                    </button>
-                </h2>
-                <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
-                    <div class="p-5 border border-t-0 border-gray-200">
-                        <p class="mb-2 text-gray-500">The main difference is that the core
-                            components from Flowbite are open source under the MIT license, whereas Tailwind UI is a
-                            paid product. Another difference is that Flowbite relies on smaller and standalone
-                            components, whereas Tailwind UI offers sections of pages.</p>
-                        <p class="mb-2 text-gray-500">However, we actually recommend using both
-                            Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you
-                            from using the best of two worlds.</p>
-                        <p class="mb-2 text-gray-500">Learn more about these technologies:</p>
-                        <ul class="ps-5 text-gray-500 list-disc">
-                            <li><a href="https://flowbite.com/pro/" class="text-blue-600 hover:underline">Flowbite
-                                    Pro</a></li>
-                            <li><a href="https://tailwindui.com/" rel="nofollow"
-                                    class="text-blue-600 hover:underline">Tailwind UI</a></li>
-                        </ul>
+                    <h2 id="accordion-open-heading-3">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 gap-3"
+                            data-accordion-target="#accordion-open-body-3" aria-expanded="false"
+                            aria-controls="accordion-open-body-3">
+                            <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                        clip-rule="evenodd"></path>
+                                </svg> What do i need to rent a car?</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
+                        <div class="p-5 border border-t-0 border-gray-200">
+                            <p class="mb-2 text-gray-500">The main difference is that the core
+                                components from Flowbite are open source under the MIT license, whereas Tailwind UI is a
+                                paid product. Another difference is that Flowbite relies on smaller and standalone
+                                components, whereas Tailwind UI offers sections of pages.</p>
+                            <p class="mb-2 text-gray-500">However, we actually recommend using both
+                                Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you
+                                from using the best of two worlds.</p>
+                            <p class="mb-2 text-gray-500">Learn more about these technologies:</p>
+                            <ul class="ps-5 text-gray-500 list-disc">
+                                <li><a href="https://flowbite.com/pro/" class="text-blue-600 hover:underline">Flowbite
+                                        Pro</a></li>
+                                <li><a href="https://tailwindui.com/" rel="nofollow"
+                                        class="text-blue-600 hover:underline">Tailwind UI</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -184,10 +188,10 @@
     {{-- car list --}}
     <section id="mostRent" class="m-5 flex flex-col gap-5 flex-wrap snap-x">
         <div class="text flex justify-between items-center">
-            <h1 class=" text-4xl font-bold">Most Frequently Rented</h1>
-            <a href="cars" class="text-lg font-medium text-blue-700">See all cars</a>
+            <h1 class=" text-2xl font-bold">Most Frequently Rented</h1>
+            <a href="cars" class="text-md font-medium text-blue-700">See all cars</a>
         </div>
-        <div class="grid grid-cols-4 gap-4 xs:grid-rows-4">
+        <div class="grid grid-rows gap-4 md:grid-cols-2 lg:grid-cols-4">
             @foreach ($cars->take(4) as $car)
                 <div class="flex flex-col gap-5 bg-white rounded-2xl shadow-xl p-5">
                     <div class="flex items-center justify-center">
@@ -226,14 +230,14 @@
     <section id="testimoni" class="p-8 m-5 my-9 bg-blue-900 rounded-lg flex flex-col gap-5">
         <div class="text flex items-end justify-between">
             <div>
-                <h3 class="text-white text-lg font-semibold">Testimonials</h3>
-                <h1 class="text-white text-3xl font-bold">Customers review</h1>
+                <h3 class="text-white text-md font-semibold lg:text-xl">Testimonials</h3>
+                <h1 class="text-white text-xl font-bold lg:text-4xl">Customers review</h1>
             </div>
             <div>
-                <a href="/review" class="bg-white px-4 py-1 rounded-2xl font-semibold">See All Review</a>
+                <a href="/review" class="bg-white px-4 py-1 text-xs text-blue-800 rounded-2xl font-semibold md:text-base lg:text-lg">See All Review</a>
             </div>
         </div>
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid grid-cols gap-4 md:grid-cols-2 lg:grid-cols-3">
             @foreach ($reviews->take(3) as $review)
                 <div class="testimoniCard p-5 bg-white rounded-lg flex flex-col gap-5 items-center shadow-xl">
                     <p class=" text-md text-center">{{ $review->reviews }}</p>

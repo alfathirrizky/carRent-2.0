@@ -11,9 +11,9 @@
 
 <body>
     <x-navbar></x-navbar>
-    <section class="flex justify-center items-center flex-col gap-5 mt-10 mb-5">
+    <section class="flex justify-center items-center flex-col gap-5 pt-20 px-5 mb-5 lg:px">
 
-        <h1 class="text-4xl font-bold">Share your journey!</h1>
+        <h1 class="text-3xl font-bold">Share your journey!</h1>
 
         @if (session('success'))
             <div class="text-green-500 font-bold">

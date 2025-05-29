@@ -12,9 +12,8 @@
 <body>
     <x-navbar></x-navbar>
     <section class="flex flex-col items-center justify-center mt-30">
-        <img class=" w-lg md:w-md sm:w-xs" src="{{ asset('storage/' . $car->gambar_mobil) }}" alt=""
-            srcset="">
-        <h1 class=" text-4xl font-bold mb-10 md:text-3xl">{{ $car['nama_mobil'] }}</h1>
+        <img class=" w-xs lg:w-lg" src="{{ asset('storage/' . $car->gambar_mobil) }}" alt="" srcset="">
+        <h1 class=" text-3xl font-bold mb-10 lg:text-4xl">{{ $car['nama_mobil'] }}</h1>
         <div class="spesifikasi flex w-2xl justify-between mb-10">
             <div class="flex gap-1 items-center">
                 <img src="{{ url('img/car-chair 1.svg') }}" alt="seaters" class="w-10 h-10">
@@ -36,7 +35,7 @@
                     <th class="border border-solid border-black text-xl">Price</th>
                 </tr>
             </thead>
-            <tbody class="border border-solid border-black">
+            <tbody class="border border-solid border-black w-sm">
                 @foreach ($car->prices as $price)
                     <tr>
                         <td class="border border-solid border-black text-center text-xl">{{ $price->durasi }}</td>
@@ -49,9 +48,9 @@
         </table>
         <div class="flex gap-5">
             <a href="/cars"
-                class="px-25 py-1 border-2 border-blue-700 rounded-4xl text-xl text-blue-700 font-bold">Back</a>
+                class="px-10 py-1 border-2 border-blue-700 rounded-4xl text-md text-blue-700 font-bold">Back</a>
             <a href="{{ route('booking.create', ['id' => $car->id]) }}"
-                class="px-25 py-1 border-2 bg-blue-700 border-blue-700 rounded-4xl text-xl text-white font-bold">Book a
+                class="px-10 py-1 border-2 bg-blue-700 border-blue-700 rounded-4xl text-md text-white font-bold">Book a
                 car</a>
         </div>
     </section>
