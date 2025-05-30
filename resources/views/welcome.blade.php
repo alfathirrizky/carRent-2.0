@@ -41,43 +41,45 @@
         </div>
     </section>
     {{-- why choose us --}}
-    {{-- <section id="chooseUs" class="flex flex-col items-center justify-center m-8 gap-6">
-        <h1 class="text-4xl font-bold">Why choose us</h1>
-        <div class="flex flex-row xs:flex-col lg:flex-row">
-            <div class="text1 w-xl flex flex-col justify-start py-10 gap-15" data-aos="fade-right">
+    <section id="chooseUs" class="flex flex-col items-center justify-center gap-5 py-10 px-5">
+        <div class="text">
+            <h1 class=" text-4xl font-bold">Why choose us</h1>
+        </div>
+        <div class="flex flex-col gap-2 lg:flex-row">
+            <div class=" bg-blue-900 flex rounded-3xl items-center gap-3 p-2 lg:p-7 lg:flex-col">
+                <img src="{{ url('img/inova.png') }}" alt="" srcset="" class=" w-40 lg:w-60">
                 <div>
-                    <h2 class=" text-xl font-bold">Armada Terawat & Beragam</h2>
-                    <p>Kami menyediakan berbagai jenis kendaraan, mulai dari city car hingga kendaraan premium, yang
-                        selalu
-                        dalam kondisi prima dan rutin diservis.</p>
-                </div>
-                <div>
-                    <h2 class="text-xl font-bold">Armada Terawat & Beragam</h2>
-                    <p>Kami menyediakan berbagai jenis kendaraan, mulai dari city car hingga kendaraan premium, yang
-                        selalu
-                        dalam kondisi prima dan rutin diservis.</p>
+                    <h1 class=" font-bold text-white text-base lg:text-lg">Fleksibilitas & Kemudahan</h1>
+                    <p class=" text-white text-xs lg:text-sm">Proses pemesanan yang mudah dan fleksibel dengan berbagai pilihan
+                        sewa harian, mingguan, atau bulanan sesuai kebutuhan Anda.</p>
                 </div>
             </div>
-            <div class="content w-40 bg-blue-900 rounded-3xl flex flex-col justify-between py-10 gap-10">
-                <img class="w-2xl" src="{{ url('img/inova.png') }}" alt="" srcset="" data-aos="zoom-in">
-                <img src="{{ url('img/jazz.png') }}" alt="" srcset=""data-aos="zoom-in">
-            </div>
-            <div class="text2 w-xl flex flex-col justify-start py-10 gap-15 text-right" data-aos="fade-left">
+            <div class=" bg-blue-900 flex rounded-3xl items-center gap-3 p-2 lg:p-7 flex-row-reverse lg:flex-col">
+                <img src="{{ url('img/inova.png') }}" alt="" srcset="" class=" w-40 lg:w-60">
                 <div>
-                    <h2 class=" text-xl font-bold">Armada Terawat & Beragam</h2>
-                    <p>Kami menyediakan berbagai jenis kendaraan, mulai dari city car hingga kendaraan premium, yang
-                        selalu
-                        dalam kondisi prima dan rutin diservis.</p>
+                    <h1 class=" font-bold text-white text-base lg:text-lg">Fleksibilitas & Kemudahan</h1>
+                    <p class=" text-white text-xs lg:text-sm">Proses pemesanan yang mudah dan fleksibel dengan berbagai pilihan
+                        sewa harian, mingguan, atau bulanan sesuai kebutuhan Anda.</p>
                 </div>
+            </div>
+            <div class=" bg-blue-900 flex rounded-3xl items-center gap-3 p-2 lg:p-7 lg:flex-col">
+                <img src="{{ url('img/inova.png') }}" alt="" srcset="" class=" w-40 lg:w-60">
                 <div>
-                    <h2 class=" text-xl font-bold">Armada Terawat & Beragam</h2>
-                    <p>Kami menyediakan berbagai jenis kendaraan, mulai dari city car hingga kendaraan premium, yang
-                        selalu
-                        dalam kondisi prima dan rutin diservis.</p>
+                    <h1 class=" font-bold text-white text-base lg:text-lg">Fleksibilitas & Kemudahan</h1>
+                    <p class=" text-white text-xs lg:text-sm">Proses pemesanan yang mudah dan fleksibel dengan berbagai pilihan
+                        sewa harian, mingguan, atau bulanan sesuai kebutuhan Anda.</p>
+                </div>
+            </div>
+            <div class=" bg-blue-900 flex rounded-3xl items-center justify-center gap-3 p-2 lg:p-7 flex-row-reverse lg:flex-col">
+                <img src="{{ url('img/inova.png') }}" alt="" srcset="" class=" w-40 lg:w-60">
+                <div>
+                    <h1 class=" font-bold text-white text-base lg:text-lg">Fleksibilitas & Kemudahan</h1>
+                    <p class=" text-white text-xs lg:text-sm">Proses pemesanan yang mudah dan fleksibel dengan berbagai pilihan
+                        sewa harian, mingguan, atau bulanan sesuai kebutuhan Anda.</p>
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
     {{-- frequently asked --}}
     <section id="question" class="my-10 flex flex-col justify-center items-center gap-10 md:flex-row lg:gap-25">
         <div class="img">
@@ -87,10 +89,10 @@
         </div>
         <div class="textContent flex flex-col items-center justify-center">
             <div class=" text-center md:text-start">
-                <h1 class=" text-blue-700 text-lg font-bold">Frequently asked questions</h1>
-                <h1 class=" text-xl font-bold w-xl mb-4">Everything you need to know about our services</h1>
+                <h1 class=" text-blue-700 text-lg font-bold lg:text-xl">Frequently asked questions</h1>
+                <h1 class=" text-xl font-bold w-xl mb-4 lg:text-3xl">Everything you need to know about our services</h1>
             </div>
-            <div>     
+            <div>
                 <div id="accordion-open" data-accordion="open" class="w-md items-center lg:w-xl">
                     <h2 id="accordion-open-heading-1">
                         <button type="button"
@@ -105,15 +107,16 @@
                                 </svg>What do i need to rent a car?</span>
                             <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5 5 1 1 5" />
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M9 5 5 1 1 5" />
                             </svg>
                         </button>
                     </h2>
                     <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
                         <div class="p-5 border border-b-0 border-gray-200">
                             <p class="mb-2 text-gray-500">Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Minus, impedit. Sed laborum sint enim pariatur consectetur quibusdam omnis
+                                adipisicing elit. Minus, impedit. Sed laborum sint enim pariatur consectetur quibusdam
+                                omnis
                                 ex nulla eveniet possimus mollitia rem fuga delectus veniam eius at soluta, error</p>
                         </div>
                     </div>
@@ -138,7 +141,8 @@
                     <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
                         <div class="p-5 border border-b-0 border-gray-200">
                             <p class="mb-2 text-gray-500">Flowbite is first conceptualized and designed
-                                using the Figma software so everything you see in the library has a design equivalent in our
+                                using the Figma software so everything you see in the library has a design equivalent in
+                                our
                                 Figma file.</p>
                             <p class="text-gray-500">Check out the <a href="https://flowbite.com/figma/"
                                     class="text-blue-600 hover:underline">Figma design system</a> based
@@ -170,7 +174,8 @@
                                 paid product. Another difference is that Flowbite relies on smaller and standalone
                                 components, whereas Tailwind UI offers sections of pages.</p>
                             <p class="mb-2 text-gray-500">However, we actually recommend using both
-                                Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you
+                                Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping
+                                you
                                 from using the best of two worlds.</p>
                             <p class="mb-2 text-gray-500">Learn more about these technologies:</p>
                             <ul class="ps-5 text-gray-500 list-disc">
@@ -188,8 +193,8 @@
     {{-- car list --}}
     <section id="mostRent" class="m-5 flex flex-col gap-5 flex-wrap snap-x">
         <div class="text flex justify-between items-center">
-            <h1 class=" text-2xl font-bold">Most Frequently Rented</h1>
-            <a href="cars" class="text-md font-medium text-blue-700">See all cars</a>
+            <h1 class=" text-2xl font-bold lg:text-3xl">Most Frequently Rented</h1>
+            <a href="cars" class="text-md font-medium text-blue-700 lg:text-lg hover:underline">See all cars</a>
         </div>
         <div class="grid grid-rows gap-4 md:grid-cols-2 lg:grid-cols-4">
             @foreach ($cars->take(4) as $car)
@@ -234,7 +239,9 @@
                 <h1 class="text-white text-xl font-bold lg:text-4xl">Customers review</h1>
             </div>
             <div>
-                <a href="/review" class="bg-white px-4 py-1 text-xs text-blue-800 rounded-2xl font-semibold md:text-base lg:text-lg">See All Review</a>
+                <a href="/review"
+                    class="bg-white px-4 py-1 text-xs text-blue-800 rounded-2xl font-semibold md:text-base lg:text-lg">See
+                    All Review</a>
             </div>
         </div>
         <div class="grid grid-cols gap-4 md:grid-cols-2 lg:grid-cols-3">
