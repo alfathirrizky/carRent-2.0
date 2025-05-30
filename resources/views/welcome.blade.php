@@ -184,7 +184,7 @@
     {{-- car list --}}
     <section id="mostRent" class="m-5 flex flex-col gap-5 flex-wrap snap-x">
         <div class="text flex justify-between items-center">
-            <h1 class=" text-4xl font-bold">Most Frequently Rented</h1>
+            <h1 class=" text-4xl font-bold sm:text-xl">Most Frequently Rented</h1>
             <a href="cars" class="text-lg font-medium text-blue-700">See all cars</a>
         </div>
         <div class="grid grid-cols-4 gap-4 xs:grid-rows-4">
