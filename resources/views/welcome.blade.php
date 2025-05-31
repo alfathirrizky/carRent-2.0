@@ -46,40 +46,42 @@
             <h1 class=" text-4xl font-bold">Why choose us</h1>
         </div>
         <div class="flex flex-col gap-2 lg:flex-row">
-            <div class=" bg-blue-900 flex rounded-3xl items-center gap-3 p-2 lg:p-7 lg:flex-col">
-                <img src="{{ url('img/inova.png') }}" alt="" srcset="" class=" w-40 lg:w-60">
+            <div class=" bg-white flex shadow-xl rounded-3xl items-center justify-center gap-3 p-5 lg:p-7 lg:flex-col">
+                <img src="{{ url('img/affordable.png') }}" alt="" srcset="" class=" w-20 lg:w-30">
                 <div>
-                    <h1 class=" font-bold text-white text-base lg:text-lg">Fleksibilitas & Kemudahan</h1>
-                    <p class=" text-white text-xs lg:text-sm">Proses pemesanan yang mudah dan fleksibel dengan berbagai
-                        pilihan
-                        sewa harian, mingguan, atau bulanan sesuai kebutuhan Anda.</p>
-                </div>
-            </div>
-            <div class=" bg-blue-900 flex rounded-3xl items-center gap-3 p-2 lg:p-7 flex-row-reverse lg:flex-col">
-                <img src="{{ url('img/inova.png') }}" alt="" srcset="" class=" w-40 lg:w-60">
-                <div>
-                    <h1 class=" font-bold text-white text-base lg:text-lg">Fleksibilitas & Kemudahan</h1>
-                    <p class=" text-white text-xs lg:text-sm">Proses pemesanan yang mudah dan fleksibel dengan berbagai
-                        pilihan
-                        sewa harian, mingguan, atau bulanan sesuai kebutuhan Anda.</p>
-                </div>
-            </div>
-            <div class=" bg-blue-900 flex rounded-3xl items-center gap-3 p-2 lg:p-7 lg:flex-col">
-                <img src="{{ url('img/inova.png') }}" alt="" srcset="" class=" w-40 lg:w-60">
-                <div>
-                    <h1 class=" font-bold text-white text-base lg:text-lg">Fleksibilitas & Kemudahan</h1>
-                    <p class=" text-white text-xs lg:text-sm">Proses pemesanan yang mudah dan fleksibel dengan berbagai
-                        pilihan
-                        sewa harian, mingguan, atau bulanan sesuai kebutuhan Anda.</p>
+                    <h1 class=" font-bold text-blue-900 text-base lg:text-lg lg:text-center">Harga Transparan &
+                        Kompetitif</h1>
+                    <p class=" text-black text-xs lg:text-sm lg:text-center">Kami menawarkan harga yang jujur dan
+                        bersaing tanpa biaya tersembunyi, sehingga Anda bisa menikmati perjalanan dengan tenang.</p>
                 </div>
             </div>
             <div
-                class=" bg-blue-900 flex rounded-3xl items-center justify-center gap-3 p-2 lg:p-7 flex-row-reverse lg:flex-col">
-                <img src="{{ url('img/inova.png') }}" alt="" srcset="" class=" w-40 lg:w-60">
+                class=" bg-white flex flex-row-reverse shadow-xl rounded-3xl items-center justify-center gap-3 p-5 lg:p-7 lg:flex-col">
+                <img src="{{ url('img/car.png') }}" alt="" srcset="" class=" w-20 lg:w-30">
                 <div>
-                    <h1 class=" font-bold text-white text-base lg:text-lg">Fleksibilitas & Kemudahan</h1>
-                    <p class=" text-white text-xs lg:text-sm">Proses pemesanan yang mudah dan fleksibel dengan berbagai
-                        pilihan
+                    <h1 class=" font-bold text-blue-900 text-base lg:text-lg lg:text-center">Armada Terawat & Beragam
+                    </h1>
+                    <p class=" text-black text-xs lg:text-sm lg:text-center">Kami menyediakan berbagai jenis kendaraan,
+                        mulai dari city car hingga kendaraan premium, yang selalu dalam kondisi prima dan rutin
+                        diservis.</p>
+                </div>
+            </div>
+            <div class=" bg-white flex shadow-xl rounded-3xl items-center justify-center gap-3 p-5 lg:p-7 lg:flex-col">
+                <img src="{{ url('img/pelayanan.png') }}" alt="" srcset="" class=" w-20 lg:w-30">
+                <div>
+                    <h1 class=" font-bold text-blue-900 text-base lg:text-lg lg:text-center">Pelayanan Profesional</h1>
+                    <p class=" text-black text-xs lg:text-sm lg:text-center">Tim kami siap memberikan layanan terbaik
+                        dengan respons cepat, ramah, dan profesional untuk memastikan kepuasan pelanggan.</p>
+                </div>
+            </div>
+            <div
+                class=" bg-white flex flex-row-reverse shadow-xl rounded-3xl justify-center items-center gap-3 p-5 lg:p-7 lg:flex-col">
+                <img src="{{ url('img/fleksibel.png') }}" alt="" srcset="" class=" w-20 lg:w-30">
+                <div>
+                    <h1 class=" font-bold text-blue-900 text-base lg:text-lg lg:text-center">Fleksibilitas & Kemudahan
+                    </h1>
+                    <p class=" text-black text-xs lg:text-sm lg:text-center">Proses pemesanan yang mudah dan fleksibel
+                        dengan berbagai pilihan
                         sewa harian, mingguan, atau bulanan sesuai kebutuhan Anda.</p>
                 </div>
             </div>
