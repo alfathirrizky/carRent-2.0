@@ -11,7 +11,7 @@
 
 <body>
     <x-navbar></x-navbar>
-    <section class="flex justify-center">
+    <section class="flex justify-center pt-15">
         <div class="detail bg-white w-2xl m-5 p-10 shadow-xl rounded-xl flex flex-col gap-3">
             <h1 class="text-xl font-bold">Detail Order</h1>
             <div>
@@ -46,7 +46,10 @@
                     <option>Transfer</option>
                 </select>
             </div>
-            <button class="bg-blue-800 text-white p-2 rounded-3xl">Konfirmasi order</button>
+            <div class="button flex justify-center gap-3">
+                <a href="/" class="bg-blue-800 text-white p-3 px-5 rounded-3xl">Konfirmasi order</a>
+                <a href="" class="bg-white border-3 border-blue-900 p-3 px-5 rounded-3xl flex gap-3"><img src="{{ url('img/unduh.png') }}" alt="" srcset="" class="w-5">Download</a>
+            </div>
         </div>
     </section>
     <x-footer></x-footer>
