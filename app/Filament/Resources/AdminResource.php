@@ -18,6 +18,7 @@ class AdminResource extends Resource
     protected static ?string $model = Admin::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-user';
+    protected static ?string $navigationLabel = 'Contact Admin';
 
     public static function form(Form $form): Form
     {

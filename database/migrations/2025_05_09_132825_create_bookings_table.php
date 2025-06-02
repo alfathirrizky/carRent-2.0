@@ -12,15 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('bookings', function (Blueprint $table) {
-        $table->id();
-        $table->string('nama');
-        $table->string('telepon');
-        $table->string('mobil');
-        $table->string('durasi');
-        $table->enum('metode_pembayaran', ['Cash', 'Transfer']);
-        $table->date('tanggal_booking');
-        $table->timestamps();
-    });
+            $table->id();
+            $table->string('nama');
+            $table->string('telepon');
+            $table->string('mobil');
+            $table->string('durasi');
+            $table->integer('harga');
+            $table->enum('metode_pembayaran', ['Cash', 'Transfer']);
+            $table->date('tanggal_booking');
+            $table->timestamps();
+        });
     }
 
     /**

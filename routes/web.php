@@ -3,6 +3,7 @@
 use App\Models\Car;
 use App\Models\Admin;
 use App\Models\Review;
+use App\Models\Transaction;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\ReviewController;
@@ -37,9 +38,9 @@ Route::get('/booking', function () {
     return view('bookingPage');
 });
 
-Route::get('/orderdetail', function () {
-    return view('orderDetail');
-});
+// Route::get('/orderdetail', function () {
+//     return view('orderDetail');
+// });
 
 Route::get('/testimoni', function () {
     return view('formReview');

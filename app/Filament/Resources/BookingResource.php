@@ -2,22 +2,23 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\BookingResource\Pages;
-use App\Filament\Resources\BookingResource\RelationManagers;
-use App\Models\Booking;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Booking;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Filament\Forms\Components\DatePicker;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Tables\Filters\SelectFilter;
-use Filament\Tables\Filters\Filter;
-use pxlrbt\FilamentExcel\Actions\Tables\ExportAction;
 use Maatwebsite\Excel\Excel;
+use Filament\Resources\Resource;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Columns\TextColumn;
 use pxlrbt\FilamentExcel\Columns\Column;
+use Filament\Forms\Components\DatePicker;
+use Filament\Tables\Filters\SelectFilter;
+use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\BookingResource\Pages;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportAction;
+use App\Filament\Resources\BookingResource\RelationManagers;
 
 class BookingResource extends Resource
 {
@@ -39,7 +40,10 @@ class BookingResource extends Resource
                 Tables\Columns\TextColumn::make('telepon')->label('Nomor Telepon Customer')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('mobil')->label('Nama Mobil')->searchable(),
                 Tables\Columns\TextColumn::make('tanggal_booking')->label('Tanggal Booking')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('durasi')->label('Durasi Booking')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('durasi')->label('Durasi Booking'),
+                Tables\Columns\TextColumn::make('harga')->label('Harga')->formatStateUsing(
+                    fn($state) => 'Rp ' . number_format($state, 0, ',', '.')
+                ),
                 Tables\Columns\TextColumn::make('metode_pembayaran')->label('Metode Pembayaran')->searchable(),
             ])
             ->filters([
@@ -118,5 +122,9 @@ class BookingResource extends Resource
     public static function getNavigationBadgeTooltip(): ?string
     {
         return 'The number of booking';
+    }
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->with('price');
     }
 }

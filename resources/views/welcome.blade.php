@@ -45,7 +45,7 @@
         <div class="text">
             <h1 class=" text-4xl font-bold">Why choose us</h1>
         </div>
-        <div class="flex flex-col gap-2 lg:flex-row">
+        <div class="grid grid-cols gap-2 md:grid-cols-2 lg:grid-cols-4">
             <div class=" bg-white flex shadow-xl rounded-3xl items-center justify-center gap-3 p-5 lg:p-7 lg:flex-col">
                 <img src="{{ url('img/affordable.png') }}" alt="" srcset="" class=" w-20 lg:w-30">
                 <div>
@@ -81,7 +81,7 @@
     <section id="question" class="my-10 flex flex-col justify-center items-center gap-10 md:flex-row lg:gap-25">
         <div class="img">
             <div class=" bg-blue-900 w-md py-5 rounded-3xl flex items-center lg:w-2xl">
-                <img src="{{ url('img/fortuner.png') }}" alt="" srcset="" class="w-sm ml-20 lg:w-2xl">
+                <img src="{{ url('img/fortuner.png') }}" alt="" srcset="" class="w-sm ml-20  lg:w-2xl">
             </div>
         </div>
         <div class="textContent flex flex-col items-center justify-center">

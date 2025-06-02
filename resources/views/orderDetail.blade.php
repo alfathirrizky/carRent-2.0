@@ -16,7 +16,7 @@
             <h1 class="text-xl font-bold">Detail Order</h1>
             <div>
                 <label class="text-md font-semibold">Nama</label>
-                <p>Alfathir</p>
+                <p>{{ $transaction->booking->nama }}</p>
             </div>
             <div>
                 <label class="text-md font-semibold">No.Telepon</label>
@@ -24,7 +24,7 @@
             </div>
             <div>
                 <label class="text-md font-semibold">Mobil</label>
-                <p>Toyota Innova</p>
+                <p>{{ $transaction->car->nama_mobil }}</p>
             </div>
             <div>
                 <label class="text-md font-semibold">Transmisi</label>
@@ -32,11 +32,11 @@
             </div>
             <div>
                 <label class="text-md font-semibold">Durasi</label>
-                <p>12 Jam</p>
+                <p>{{ $transaction->durasi }}</p>
             </div>
             <div>
                 <label class="text-md font-semibold">Jumlah Pembayaran</label>
-                <p>Rp.1.000.000</p>
+                <p>Rp{{ number_format($transaction->harga, 0, ',', '.') }}</p>
             </div>
             <div class="mb-3">
                 <label for="countries" class="block mb-2 text-md font-semibold">Metode Pembayaran</label>
@@ -48,7 +48,8 @@
             </div>
             <div class="button flex justify-center gap-3">
                 <a href="/" class="bg-blue-800 text-white p-3 px-5 rounded-3xl">Konfirmasi order</a>
-                <a href="" class="bg-white border-3 border-blue-900 p-3 px-5 rounded-3xl flex gap-3"><img src="{{ url('img/unduh.png') }}" alt="" srcset="" class="w-5">Download</a>
+                <a href="" class="bg-white border-3 border-blue-900 p-3 px-5 rounded-3xl flex gap-3"><img
+                        src="{{ url('img/unduh.png') }}" alt="" srcset="" class="w-5">Download</a>
             </div>
         </div>
     </section>
