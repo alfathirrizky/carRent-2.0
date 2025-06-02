@@ -16,35 +16,36 @@
             <h1 class="text-xl font-bold">Detail Order</h1>
             <div>
                 <label class="text-md font-semibold">Nama</label>
-                <p>{{ $transaction->booking->nama }}</p>
+                <p>{{ $booking->nama }}</p>
             </div>
             <div>
                 <label class="text-md font-semibold">No.Telepon</label>
-                <p>085714128721</p>
+                <p>{{ $booking->telepon }}</p>
             </div>
             <div>
                 <label class="text-md font-semibold">Mobil</label>
-                <p>{{ $transaction->car->nama_mobil }}</p>
+                <p>{{ $booking->mobil }}</p>
             </div>
             <div>
                 <label class="text-md font-semibold">Transmisi</label>
-                <p>Matic</p>
+                <p>{{ $booking->tipe }}</p>
             </div>
             <div>
                 <label class="text-md font-semibold">Durasi</label>
-                <p>{{ $transaction->durasi }}</p>
+                <p>{{ $booking->durasi }}</p>
+            </div>
+            <div>
+                <label class="text-md font-semibold">Tanggal Booking</label>
+                <p>{{ \Carbon\Carbon::parse($booking->tanggal_booking)->format('d M Y') }}</p>
+
             </div>
             <div>
                 <label class="text-md font-semibold">Jumlah Pembayaran</label>
-                <p>Rp{{ number_format($transaction->harga, 0, ',', '.') }}</p>
-            </div>
+                <p>Rp{{ number_format($booking->harga, 0, ',', '.') }}</p>
+            </div>  
             <div class="mb-3">
                 <label for="countries" class="block mb-2 text-md font-semibold">Metode Pembayaran</label>
-                <select id="countries"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                    <option>Cash</option>
-                    <option>Transfer</option>
-                </select>
+                <p>{{$booking->metode_pembayaran}}</p>
             </div>
             <div class="button flex justify-center gap-3">
                 <a href="/" class="bg-blue-800 text-white p-3 px-5 rounded-3xl">Konfirmasi order</a>

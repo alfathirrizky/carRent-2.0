@@ -12,8 +12,6 @@ class BookingController extends Controller
 {
     public function store(Request $request)
     {
-
-        // dd($request);
         // Validasi data
         $validated = $request->validate([
             'nama' => 'required|string|max:100',
@@ -23,9 +21,12 @@ class BookingController extends Controller
             'metode_pembayaran' => 'required|in:cash,transfer',
             'tanggal_booking' => 'required|date'
         ]);
+
+        // Pisahkan durasi dan harga dari field gabungan
         list($durasi, $harga) = explode('|', $request->durasi_harga);
-        // Simpan ke database
-        Booking::create([
+
+        // Simpan ke database dan ambil hasilnya ke $booking
+        $booking = Booking::create([
             'nama' => $validated['nama'],
             'telepon' => $validated['telepon'],
             'mobil' => $validated['mobil'],
@@ -34,8 +35,9 @@ class BookingController extends Controller
             'metode_pembayaran' => $validated['metode_pembayaran'],
             'tanggal_booking' => $validated['tanggal_booking'],
         ]);
-        // Redirect dengan pesan sukses
-        return redirect('/')->with('success', true);
+
+        // Redirect ke detail booking
+        return redirect()->route('booking.detail', $booking->id);
     }
     public function create($id)
     {
@@ -43,4 +45,11 @@ class BookingController extends Controller
         $prices = Price::where('car_id', $id)->get();
         return view('bookingPage', compact('car', 'prices'));
     }
+
+        public function show($id)
+    {
+        $booking = Booking::findOrFail($id);
+        return view('orderDetail', compact('booking'));
+    }
+
 }

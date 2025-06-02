@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use App\Models\Price;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
@@ -20,4 +21,11 @@ class CarController extends Controller
 
         return view('carsList', compact('cars'));
     }
+    public function create($id)
+    {
+        $car = Car::findOrFail($id);
+        $prices = Price::where('car_id', $id)->get();
+        return view('bookingPage', compact('car', 'prices'));
+    }
+
 }

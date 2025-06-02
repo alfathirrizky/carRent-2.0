@@ -57,3 +57,14 @@ Route::get('/cars', [CarController::class, 'index'])->name('cars.index');
 Route::get('/booking/{id}', [BookingController::class, 'create']);
 
 Route::get('/booking/{id}', [BookingController::class, 'create'])->name('booking.create');
+
+Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
+
+Route::post('/booking/store', [BookingController::class, 'store'])->name('booking.store');
+
+Route::get('/booking/{id}', [BookingController::class, 'show'])->name('booking.detail');
+
+Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
+
+Route::get('/booking/create/{id}', [BookingController::class, 'create'])->name('booking.create');
+
