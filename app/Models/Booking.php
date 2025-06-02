@@ -11,7 +11,12 @@ class Booking extends Model
         'telepon',
         'mobil',
         'durasi',
+        'harga',
         'metode_pembayaran',
         'tanggal_booking'
     ];
+    public function price()
+    {
+        return $this->belongsTo(Price::class);
+    }
 }

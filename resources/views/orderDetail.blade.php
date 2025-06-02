@@ -17,7 +17,7 @@
 
             <div>
                 <label class="text-md font-semibold">Nama</label>
-                <p>{{ $booking->nama }}</p>
+                <p>Alfathir</p>
             </div>
 
             <div>
@@ -27,7 +27,7 @@
 
             <div>
                 <label class="text-md font-semibold">Mobil</label>
-                <p>{{ $booking->mobil }}</p>
+                <p>Toyota Innova</p>
             </div>
 
             <div>
@@ -37,21 +37,24 @@
 
             <div>
                 <label class="text-md font-semibold">Durasi</label>
-                <p>{{ $booking->durasi }}</p>
+                <p>12 Jam</p>
             </div>
 
             <div>
-                <label class="text-md font-semibold">Metode Pembayaran</label>
-                <p>{{ ucfirst($booking->metode_pembayaran) }}</p>
+                <label class="text-md font-semibold">Jumlah Pembayaran</label>
+                <p>Rp.1.000.000</p>
             </div>
-
-            <div class="flex justify-center gap-3 mt-6">
-                <a href="/" class="bg-blue-800 text-white p-3 px-5 rounded-3xl">Konfirmasi Order</a>
-                <a href="#"
-                    class="bg-white border border-blue-800 text-blue-800 p-3 px-5 rounded-3xl flex items-center gap-2">
-                    <img src="{{ url('img/unduh.png') }}" alt="Download" class="w-5">
-                    Download
-                </a>
+            <div class="mb-3">
+                <label for="countries" class="block mb-2 text-md font-semibold">Metode Pembayaran</label>
+                <select id="countries"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option>Cash</option>
+                    <option>Transfer</option>
+                </select>
+            </div>
+            <div class="button flex justify-center gap-3">
+                <a href="/" class="bg-blue-800 text-white p-3 px-5 rounded-3xl">Konfirmasi order</a>
+                <a href="" class="bg-white border-3 border-blue-900 p-3 px-5 rounded-3xl flex gap-3"><img src="{{ url('img/unduh.png') }}" alt="" srcset="" class="w-5">Download</a>
             </div>
         </div>
     </section>

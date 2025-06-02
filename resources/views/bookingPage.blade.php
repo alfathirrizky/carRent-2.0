@@ -19,65 +19,64 @@
             class="bg-blue-700 rounded-3xl w-full max-w-xl p-8 flex flex-col gap-5 shadow-lg">
             @csrf
 
-            <div class="flex flex-col gap-1">
-                <label class="text-white text-md font-semibold">Nama Lengkap</label>
-                <input class="rounded-xl p-2 text-gray-800" type="text" name="nama"
-                    placeholder="Tulis Nama Lengkap Anda" required>
-            </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-white text-md font-semibold">Nama Lengkap</label>
+                    <input class="rounded-xl p-2 text-gray-800" type="text" name="nama"
+                        placeholder="Tulis Nama Lengkap Anda" required>
+                </div>
 
-            <div class="flex flex-col gap-1">
-                <label class="text-white text-md font-semibold">Nomor Telepon</label>
-                <input class="rounded-xl p-2 text-gray-800" type="text" name="telepon" placeholder="0857xxxxxxx"
-                    required>
-            </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-white text-md font-semibold">Nomor Telepon</label>
+                    <input class="rounded-xl p-2 text-gray-800" type="text" name="telepon" placeholder="0857xxxxxxx"
+                        required>
+                </div>
 
-            <div class="flex flex-col gap-1">
-                <label class="text-white text-md font-semibold">Mobil</label>
-                <input type="text" name="mobil" class="rounded-xl p-2 text-gray-800"
-                    value="{{ $car->nama_mobil ?? 'Toyota Avanza' }}" readonly>
-            </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-white text-md font-semibold">Mobil</label>
+                    <input type="text" name="mobil" class="rounded-xl p-2 text-gray-800"
+                        value="{{ $car->nama_mobil }}" readonly>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-white text-md font-semibold">Tanggal Booking</label>
+                    <input class="rounded-xl p-2 text-gray-800" type="date" name="tanggal_booking" required>
+                </div>
 
-            <div class="flex flex-col gap-1">
-                <label class="text-white text-md font-semibold">Tanggal Booking</label>
-                <input class="rounded-xl p-2 text-gray-800" type="date" name="tanggal_booking" required>
-            </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-white text-md font-semibold">Durasi</label>
+                    <select name="durasi" class="rounded-xl p-2 text-gray-800 bg-white border border-gray-300"
+                        required>
+                        <option>12 Jam</option>
+                        <option>24 Jam</option>
+                        <option>36 Jam</option>
+                        <option>48 Jam</option>
+                        <option>60 Jam</option>
+                        <option>72 Jam</option>
+                    </select>
+                </div>
 
-            <div class="flex flex-col gap-1">
-                <label class="text-white text-md font-semibold">Durasi</label>
-                <select name="durasi" class="rounded-xl p-2 text-gray-800 bg-white border border-gray-300" required>
-                    <option value="12 Jam">12 Jam</option>
-                    <option value="24 Jam">24 Jam</option>
-                    <option value="36 Jam">36 Jam</option>
-                    <option value="48 Jam">48 Jam</option>
-                    <option value="60 Jam">60 Jam</option>
-                    <option value="72 Jam">72 Jam</option>
-                </select>
-            </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-white text-md font-semibold">Metode Pembayaran</label>
+                    <select name="metode_pembayaran"
+                        class="rounded-xl p-2 text-gray-800 bg-white border border-gray-300" required>
+                        <option value="cash">Cash</option>
+                        <option value="transfer">Transfer</option>
+                    </select>
+                </div>
 
-            <div class="flex flex-col gap-1">
-                <label class="text-white text-md font-semibold">Metode Pembayaran</label>
-                <select name="metode_pembayaran" class="rounded-xl p-2 text-gray-800 bg-white border border-gray-300"
-                    required>
-                    <option value="cash">Cash</option>
-                    <option value="transfer">Transfer</option>
-                </select>
-            </div>
+                <div class="flex justify-center gap-4 mt-4">
+                    <a href="/cars"
+                        class="bg-white text-blue-700 px-6 py-2 text-lg font-semibold rounded-2xl hover:bg-gray-100 transition">
+                        Cancel
+                    </a>
+                    <button type="submit"
+                        class="bg-white text-blue-700 px-6 py-2 text-lg font-semibold rounded-2xl hover:bg-gray-100 transition">
+                        Book a car
+                    </button>
+                </div>
+            </form>
+        </section>
+        <x-footer />
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    </body>
 
-            <div class="flex justify-center gap-4 mt-4">
-                <a href="/cars"
-                    class="bg-white text-blue-700 px-6 py-2 text-lg font-semibold rounded-2xl hover:bg-gray-100 transition">
-                    Cancel
-                </a>
-                <button type="submit"
-                    class="bg-white text-blue-700 px-6 py-2 text-lg font-semibold rounded-2xl hover:bg-gray-100 transition">
-                    Book a car
-                </button>
-            </div>
-        </form>
-    </section>
-
-    <x-footer />
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-</body>
-
-</html>
+    </html>

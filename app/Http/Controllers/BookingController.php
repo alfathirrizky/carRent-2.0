@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Id;
 use App\Models\Car;
+use App\Models\Price;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 
@@ -17,26 +19,22 @@ class BookingController extends Controller
             'nama' => 'required|string|max:100',
             'telepon' => 'required|string|max:20',
             'mobil' => 'required|string|max:100',
-            'durasi' => 'required|string|max:50',
+            'durasi_harga' => 'required|string',
             'metode_pembayaran' => 'required|in:cash,transfer',
             'tanggal_booking' => 'required|date'
         ]);
 
-        // // Simpan ke database
-        // Booking::create($validated);
+        // Simpan ke database
+        Booking::create($validated);
 
-        // // Redirect dengan pesan sukses
-        // return redirect('/')->with('success', true);
-
-        $booking = Booking::create($validated);
-        return redirect()->route('booking.detail', $booking->id);
-
-
+        // Redirect dengan pesan sukses
+        return redirect('/')->with('success', true);
     }
     public function create($id)
     {
         $car = Car::findOrFail($id);
-        return view('bookingPage', compact('car'));
+        $prices = Price::where('car_id', $id)->get();
+        return view('bookingPage', compact('car', 'prices'));
     }
 
     public function show($id)

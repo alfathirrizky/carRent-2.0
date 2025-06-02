@@ -12,34 +12,34 @@
 <body>
     <x-navbar></x-navbar>
     <section class="flex flex-col items-center justify-center mt-30">
-        <img class=" w-xs lg:w-lg" src="{{ asset('storage/' . $car->gambar_mobil) }}" alt="" srcset="">
-        <h1 class=" text-3xl font-bold mb-10 lg:text-4xl">{{ $car['nama_mobil'] }}</h1>
-        <div class="spesifikasi flex w-2xl justify-between mb-10">
-            <div class="flex gap-1 items-center">
-                <img src="{{ url('img/car-chair 1.svg') }}" alt="seaters" class="w-10 h-10">
-                <p class="text-md">{{ $car['seater'] }}</p>
+        <img class=" w-xs lg:mb-10 md:w-md lg:w-lg" src="{{ asset('storage/' . $car->gambar_mobil) }}" alt="" srcset="">
+        <h1 class=" text-3xl font-bold mb-5 lg:mb-10 lg:text-4xl">{{ $car['nama_mobil'] }}</h1>
+        <div class="spesifikasi flex w-2xl items-center justify-center gap-20 lg:gap-40 mb-5">
+            <div class="flex gap-3 items-center">
+                <img src="{{ url('img/car-chair 1.svg') }}" alt="seaters" class="w-9 h-9 lg:w-13 lg:h-13">
+                <p class="text-md font-semibold">{{ $car['seater'] }}</p>
             </div>
-            <div class="flex gap-1 items-center">
-                <img src="{{ url('img/gas-station 1.svg') }}" alt="seaters" class="w-10 h-10">
-                <p class="text-md">{{ $car['bahan_bakar'] }}</p>
+            <div class="flex gap-3 items-center">
+                <img src="{{ url('img/gas-station 1.svg') }}" alt="seaters" class="w-9 h-9 lg:w-13 lg:h-13">
+                <p class="text-md font-semibold">{{ $car['bahan_bakar'] }}</p>
             </div>
-            <div class="flex gap-1 items-center">
-                <img src="{{ url('img/gearbox 1.svg') }}" alt="seaters" class="w-10 h-10">
-                <p class="text-md">{{ $car['tipe'] }}</p>
+            <div class="flex gap-3 items-center">
+                <img src="{{ url('img/gearbox 1.svg') }}" alt="seaters" class="w-9 h-9 lg:w-13 lg:h-13">
+                <p class="text-md font-semibold">{{ $car['tipe'] }}</p>
             </div>
         </div>
-        <table class="table-auto w-2xl border-solid mb-8">
+        <table class="table-auto w-md border-solid mb-8 lg:w-4xl">
             <thead class=" bg-blue-700 text-white border border-solid border-black">
                 <tr>
-                    <th class="border border-solid border-black text-xl">Duration</th>
-                    <th class="border border-solid border-black text-xl">Price</th>
+                    <th class="border border-solid border-black text-md lg:text-lg">Duration</th>
+                    <th class="border border-solid border-black text-md lg:text-lg">Price</th>
                 </tr>
             </thead>
             <tbody class="border border-solid border-black w-sm">
                 @foreach ($car->prices as $price)
                     <tr>
-                        <td class="border border-solid border-black text-center text-xl">{{ $price->durasi }}</td>
-                        <td class="border border-solid border-black text-center text-xl">
+                        <td class="border border-solid border-black text-center text-md lg:text-lg">{{ $price->durasi }}</td>
+                        <td class="border border-solid border-black text-center text-md lg:text-lg">
                             Rp. {{ number_format($price->harga, 0, ',', '.') }}
                         </td>
                     </tr>
