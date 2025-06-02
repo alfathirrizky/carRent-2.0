@@ -60,11 +60,7 @@ Route::get('/booking/{id}', [BookingController::class, 'create'])->name('booking
 
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 
-Route::post('/booking/store', [BookingController::class, 'store'])->name('booking.store');
-
 Route::get('/booking/{id}', [BookingController::class, 'show'])->name('booking.detail');
-
-Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 
 Route::get('/booking/create/{id}', [BookingController::class, 'create'])->name('booking.create');
 
