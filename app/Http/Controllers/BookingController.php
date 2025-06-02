@@ -22,15 +22,27 @@ class BookingController extends Controller
             'tanggal_booking' => 'required|date'
         ]);
 
-        // Simpan ke database
-        Booking::create($validated);
+        // // Simpan ke database
+        // Booking::create($validated);
 
-        // Redirect dengan pesan sukses
-        return redirect('/')->with('success', true);
+        // // Redirect dengan pesan sukses
+        // return redirect('/')->with('success', true);
+
+        $booking = Booking::create($validated);
+        return redirect()->route('booking.detail', $booking->id);
+
+
     }
     public function create($id)
     {
         $car = Car::findOrFail($id);
         return view('bookingPage', compact('car'));
     }
+
+    public function show($id)
+{
+    $booking = Booking::findOrFail($id);
+    return view('orderDetail', compact('booking'));
+}
+
 }
