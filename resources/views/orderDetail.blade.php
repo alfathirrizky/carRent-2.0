@@ -28,7 +28,7 @@
             </div>
             <div>
                 <label class="text-md font-semibold">Transmisi</label>
-                <p>{{ $booking->tipe }}</p>
+                <p>{{ $booking->transmisi }}</p>
             </div>
             <div>
                 <label class="text-md font-semibold">Durasi</label>

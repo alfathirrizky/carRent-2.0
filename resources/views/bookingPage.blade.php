@@ -40,8 +40,8 @@
 
                     <div class="flex flex-col gap-1">
                         <label class="text-white text-md font-semibold">Mobil</label>
-                        <input type="text" name="mobil" class="rounded-xl p-2 text-gray-800"
-                            value="{{ $car->nama_mobil }}" readonly>
+                        <input type="text" name="mobil_tipe" class="rounded-xl p-2 text-gray-800"
+                            value="{{ $car->nama_mobil }}|{{ $car->tipe }}" readonly>
                     </div>
                     <div class="flex flex-col gap-1">
                         <label class="text-white text-md font-semibold">Tanggal Booking</label>

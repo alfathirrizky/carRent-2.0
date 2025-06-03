@@ -39,6 +39,7 @@ class BookingResource extends Resource
                 Tables\Columns\TextColumn::make('nama')->label('Nama Customer')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('telepon')->label('Nomor Telepon Customer')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('mobil')->label('Nama Mobil')->searchable(),
+                Tables\Columns\TextColumn::make('transmisi')->label('Transmisi')->searchable(),
                 Tables\Columns\TextColumn::make('tanggal_booking')->label('Tanggal Booking')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('durasi')->label('Durasi Booking'),
                 Tables\Columns\TextColumn::make('harga')->label('Harga')->formatStateUsing(

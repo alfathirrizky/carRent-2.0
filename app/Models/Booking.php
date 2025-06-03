@@ -10,6 +10,7 @@ class Booking extends Model
         'nama',
         'telepon',
         'mobil',
+        'transmisi',
         'durasi',
         'harga',
         'metode_pembayaran',

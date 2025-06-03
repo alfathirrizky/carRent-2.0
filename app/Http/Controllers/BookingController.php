@@ -16,7 +16,7 @@ class BookingController extends Controller
         $validated = $request->validate([
             'nama' => 'required|string|max:100',
             'telepon' => 'required|string|max:20',
-            'mobil' => 'required|string|max:100',
+            'mobil_tipe' => 'required|string',
             'durasi_harga' => 'required|string',
             'metode_pembayaran' => 'required|in:cash,transfer',
             'tanggal_booking' => 'required|date'
@@ -24,12 +24,14 @@ class BookingController extends Controller
 
         // Pisahkan durasi dan harga dari field gabungan
         list($durasi, $harga) = explode('|', $request->durasi_harga);
+        list($mobil, $tipe) = explode('|', $request->mobil_tipe);
 
         // Simpan ke database dan ambil hasilnya ke $booking
         $booking = Booking::create([
             'nama' => $validated['nama'],
             'telepon' => $validated['telepon'],
-            'mobil' => $validated['mobil'],
+            'mobil' => $mobil,
+            'transmisi' => $tipe,
             'durasi' => $durasi,
             'harga' => $harga,
             'metode_pembayaran' => $validated['metode_pembayaran'],
@@ -46,7 +48,7 @@ class BookingController extends Controller
         return view('bookingPage', compact('car', 'prices'));
     }
 
-        public function show($id)
+    public function show($id)
     {
         $booking = Booking::findOrFail($id);
         return view('orderDetail', compact('booking'));
