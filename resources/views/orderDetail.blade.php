@@ -12,7 +12,7 @@
 <body>
     <x-navbar></x-navbar>
     <section class="flex justify-center pt-15">
-        <div class="detail bg-white w-2xl m-5 p-10 shadow-xl rounded-xl flex flex-col gap-3">
+        <div class="detail bg-white w-2xl m-5 p-5 shadow-xl rounded-xl flex flex-col gap-2">
             <h1 class="text-xl font-bold">Detail Order</h1>
             <div>
                 <label class="text-md font-semibold">Nama</label>
@@ -42,16 +42,22 @@
             <div>
                 <label class="text-md font-semibold">Jumlah Pembayaran</label>
                 <p>Rp{{ number_format($booking->harga, 0, ',', '.') }}</p>
-            </div>  
+            </div>
             <div class="mb-3">
                 <label for="countries" class="block mb-2 text-md font-semibold">Metode Pembayaran</label>
-                <p>{{$booking->metode_pembayaran}}</p>
+                <p>{{ $booking->metode_pembayaran }}</p>
             </div>
-            <div class="button flex justify-center gap-3">
-                <a href="/" class="bg-blue-800 text-white p-3 px-5 rounded-3xl">Konfirmasi order</a>
-                <a href="" class="bg-white border-3 border-blue-900 p-3 px-5 rounded-3xl flex gap-3"><img
-                        src="{{ url('img/unduh.png') }}" alt="" srcset="" class="w-5">Download</a>
+            <div class="btn flex justify-center items-center gap-2">
+                <a href="" class="bg-white border-3 border-blue-900 rounded-3xl py-1 px-7 text-center flex justify-center gap-1 items-center"><img
+                        src="{{ url('img/unduh.png') }}" alt="" srcset="" class="w-4 h-4">Download</a>
+                <a href="/"
+                    class="bg-blue-900 border-3 text-white border-blue-900 rounded-3xl py-1 px-7 text-center">Konfirmasi</a>
             </div>
+            {{-- <div class="button flex justify-center gap-2">
+                <a href="/" class="bg-blue-800 text-white py-3 px-5 rounded-3xl text-xs text-center">Konfirmasi order</a>
+                <a href="" class="bg-white border-3 border-blue-900 p-3 px-5 rounded-3xl flex gap-3 text-center"><img
+                        src="{{ url('img/unduh.png') }}" alt="" srcset="" class="w-5 h-5">Download</a>
+            </div> --}}
         </div>
     </section>
     <x-footer></x-footer>

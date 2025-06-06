@@ -3,7 +3,7 @@
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="https://flowbite.com/" class="flex items-center">
-                    <img src="{{ url('img/logo.svg') }}" class="h-12 me-3" alt="FlowBite Logo" />
+                    <img src="{{ url('img/logo.svg') }}" class="h-9 me-3" alt="FlowBite Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap">Car Rent</span>
                 </a>
             </div>
