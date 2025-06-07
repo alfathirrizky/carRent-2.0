@@ -48,7 +48,7 @@
                 <p>{{ $booking->metode_pembayaran }}</p>
             </div>
             <div class="btn flex justify-center items-center gap-2">
-                <a href="" class="bg-white border-3 border-blue-900 rounded-3xl py-1 px-7 text-center flex justify-center gap-1 items-center"><img
+                <a href="{{ route('order.download', $booking->id) }}" class="bg-white border-3 border-blue-900 rounded-3xl py-1 px-7 text-center flex justify-center gap-1 items-center"><img
                         src="{{ url('img/unduh.png') }}" alt="" srcset="" class="w-4 h-4">Download</a>
                 <a href="/"
                     class="bg-blue-900 border-3 text-white border-blue-900 rounded-3xl py-1 px-7 text-center">Konfirmasi</a>

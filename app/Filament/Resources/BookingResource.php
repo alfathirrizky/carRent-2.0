@@ -10,9 +10,12 @@ use Filament\Tables\Table;
 use Maatwebsite\Excel\Excel;
 use Filament\Resources\Resource;
 use Filament\Tables\Filters\Filter;
+use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\BadgeColumn;
 use pxlrbt\FilamentExcel\Columns\Column;
 use Filament\Forms\Components\DatePicker;
+use Filament\Tables\Columns\SelectColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\BookingResource\Pages;
@@ -46,6 +49,12 @@ class BookingResource extends Resource
                     fn($state) => 'Rp ' . number_format($state, 0, ',', '.')
                 ),
                 Tables\Columns\TextColumn::make('metode_pembayaran')->label('Metode Pembayaran')->searchable(),
+                SelectColumn::make('status')
+                    ->options([
+                        'Pending' => 'Pending',
+                        'On the way' => 'On the way',
+                        'Success' => 'Success',
+                    ])->rules(['required'])->selectablePlaceholder(false)
             ])
             ->filters([
                 Filter::make('created_at')

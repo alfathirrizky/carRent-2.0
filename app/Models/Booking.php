@@ -20,4 +20,8 @@ class Booking extends Model
     {
         return $this->belongsTo(Price::class);
     }
+    public function car()
+    {
+        return $this->belongsTo(Car::class);
+    }
 }

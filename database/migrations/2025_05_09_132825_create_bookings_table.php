@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('harga');
             $table->enum('metode_pembayaran', ['Cash', 'Transfer']);
             $table->date('tanggal_booking');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

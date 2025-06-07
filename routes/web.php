@@ -6,6 +6,7 @@ use App\Models\Review;
 use App\Models\Transaction;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\BookingController;
 
@@ -64,3 +65,4 @@ Route::get('/booking/{id}', [BookingController::class, 'show'])->name('booking.d
 
 Route::get('/booking/create/{id}', [BookingController::class, 'create'])->name('booking.create');
 
+Route::get('/order/{id}/download', [OrderController::class, 'download'])->name('order.download');
