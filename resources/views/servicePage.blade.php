@@ -11,6 +11,9 @@
 
 <body>
     <x-navbar></x-navbar>
+    <section>
+        <h1>hai</h1>
+    </section>
     <x-footer></x-footer>
 </body>
 

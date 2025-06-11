@@ -74,4 +74,8 @@ class DriverResource extends Resource
             'edit' => Pages\EditDriver::route('/{record}/edit'),
         ];
     }
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Operasional';
+    }
 }

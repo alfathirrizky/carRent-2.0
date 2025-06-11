@@ -73,4 +73,8 @@ class SetoranResource extends Resource
             'edit' => Pages\EditSetoran::route('/{record}/edit'),
         ];
     }
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Operasional';
+    }
 }

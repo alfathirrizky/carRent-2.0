@@ -113,4 +113,8 @@ class CarResource extends Resource
     {
         return 'The number of cars';
     }
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Unit';
+    }
 }
