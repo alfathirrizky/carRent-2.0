@@ -46,6 +46,9 @@ Route::get('/booking', function () {
 Route::get('/testimoni', function () {
     return view('formReview');
 });
+Route::get('/service', function () {
+    return view('servicePage');
+});
 
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 

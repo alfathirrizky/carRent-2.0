@@ -27,7 +27,7 @@ class SetoranResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('nama')->placeholder('Masukkan Nama')->label('Nama Driver')->required(),
                         Forms\Components\TextInput::make('mobil')->placeholder('Masukkan Nama Mobil')->label('Nama Mobil')->required(),
-                        Forms\Components\DatePicker::make('tgl_booking')->label('Tanggal Setoran')->required(),
+                        Forms\Components\DatePicker::make('tanggal_Setoran')->label('Tanggal Setoran')->required(),
                         Forms\Components\TextInput::make('harga')->placeholder('Masukkan Jumlah Setoran')->label('Jumlah Setoran')->required(),
                     ])
             ]);
@@ -39,8 +39,10 @@ class SetoranResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('nama')->label('Nama Driver')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('mobil')->label('Nama Mobil')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('tgl_booking')->label('Tanggal Setoran')->searchable(),
-                Tables\Columns\TextColumn::make('harga')->label('Jumlah Setoran')->searchable(),
+                Tables\Columns\TextColumn::make('tanggal_Setoran')->label('Tanggal Setoran')->searchable(),
+                Tables\Columns\TextColumn::make('harga')->label('Jumlah Setoran')->searchable()->formatStateUsing(
+                    fn($state) => 'Rp ' . number_format($state, 0, ',', '.')
+                ),
             ])
             ->filters([
                 //

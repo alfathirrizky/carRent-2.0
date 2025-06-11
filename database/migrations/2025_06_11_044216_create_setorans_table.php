@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('mobil');
-            $table->date('tgl_Setoran');
-            $table->string('harga');
+            $table->date('tanggal_Setoran');
+            $table->integer('harga');
             $table->timestamps();
         });
     }
