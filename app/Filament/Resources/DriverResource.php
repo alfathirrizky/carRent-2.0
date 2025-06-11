@@ -1,0 +1,76 @@
+<?php
+
+namespace App\Filament\Resources;
+
+use App\Filament\Resources\DriverResource\Pages;
+use App\Filament\Resources\DriverResource\RelationManagers;
+use App\Models\Driver;
+use Filament\Forms;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+
+class DriverResource extends Resource
+{
+    protected static ?string $model = Driver::class;
+
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    public static function form(Form $form): Form
+    {
+        return $form
+            ->schema([
+                Forms\Components\Card::make()
+                    ->schema([
+                        Forms\Components\TextInput::make('nama')->placeholder('Masukkan Nama')->label('Nama Driver')->required(),
+                        Forms\Components\TextInput::make('umur')->placeholder('Masukkan Umur')->label('Umur Driver')->required(),
+                        Forms\Components\TextInput::make('alamat')->placeholder('Masukkan Alamat')->label('Alamat')->required(),
+                        Forms\Components\Select::make('jns_kelamin')->options([
+                            'Laki-Laki' => 'Laki-Laki',
+                            'Perempuan' => 'Perempuan'
+                        ])->label('Jenis Kelamin')->placeholder('Pilih Jenis Kelamin')->required(),
+                    ])
+            ]);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return $table
+            ->columns([
+                Tables\Columns\TextColumn::make('nama')->label('Nama Driver')->searchable(),
+                Tables\Columns\TextColumn::make('umur')->label('Umur Driver')->searchable(),
+                Tables\Columns\TextColumn::make('alamat')->label('Alamat')->searchable(),
+                Tables\Columns\TextColumn::make('jns_kelamin')->label('Jenis Kelamin')->searchable(),
+            ])
+            ->filters([
+                //
+            ])
+            ->actions([
+                Tables\Actions\EditAction::make(),
+            ])
+            ->bulkActions([
+                Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\DeleteBulkAction::make(),
+                ]),
+            ]);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => Pages\ListDrivers::route('/'),
+            'create' => Pages\CreateDriver::route('/create'),
+            'edit' => Pages\EditDriver::route('/{record}/edit'),
+        ];
+    }
+}
