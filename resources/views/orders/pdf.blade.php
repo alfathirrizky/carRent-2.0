@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <title>Detail Booking</title>
@@ -44,22 +45,28 @@
         }
     </style>
 </head>
+
 <body>
     <div class="card">
         <h2>Detail Order</h2>
 
         <div class="row"><span class="label">Nama:</span> <span class="value">{{ $booking->nama }}</span></div>
-        <div class="row"><span class="label">No. Telepon:</span> <span class="value">{{ $booking->telepon }}</span></div>
-        <div class="row"><span class="label">Mobil:</span> <span class="value">{{ $booking->mobil }}</span></div>
-        <div class="row"><span class="label">Transmisi:</span> <span class="value">{{ $booking->transmisi }}</span></div>
-        <div class="row"><span class="label">Durasi:</span> <span class="value">{{ $booking->durasi }} Jam</span></div>
-        <div class="row"><span class="label">Tanggal Booking:</span> 
-            <span class="value">{{ \Carbon\Carbon::parse($booking->tanggal_booking)->translatedFormat('d M Y') }}</span>
+        <div class="row"><span class="label">No. Telepon:</span> <span class="value">{{ $booking->telepon }}</span>
         </div>
-        <div class="row"><span class="label">Jumlah Pembayaran:</span> 
+        <div class="row"><span class="label">Mobil:</span> <span class="value">{{ $booking->mobil }}</span></div>
+        <div class="row"><span class="label">Transmisi:</span> <span class="value">{{ $booking->transmisi }}</span>
+        </div>
+        <div class="row"><span class="label">Durasi:</span> <span class="value">{{ $booking->durasi }}</span></div>
+        <div class="row"><span class="label">Tanggal Booking:</span>
+            <span
+                class="value">{{ \Carbon\Carbon::parse($booking->tanggal_booking)->translatedFormat('d M Y') }}</span>
+        </div>
+        <div class="row"><span class="label">Jumlah Pembayaran:</span>
             <span class="value">Rp{{ number_format($booking->harga, 0, ',', '.') }}</span>
         </div>
-        <div class="row"><span class="label">Metode Pembayaran:</span> <span class="value">{{ $booking->metode_pembayaran }}</span></div>
+        <div class="row"><span class="label">Metode Pembayaran:</span> <span
+                class="value">{{ $booking->metode_pembayaran }}</span></div>
     </div>
 </body>
+
 </html>
