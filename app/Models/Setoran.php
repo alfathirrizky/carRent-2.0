@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Setoran extends Model
 {
     use HasFactory;
-    protected $fillable = ['nama', 'mobil', 'tanggal_Setoran', 'harga'];
+    protected $fillable = [
+        'nama',
+        'mobil',
+        'tanggal_Setoran',
+        'harga'
+    ];
 }

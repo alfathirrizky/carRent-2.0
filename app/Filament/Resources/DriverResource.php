@@ -78,4 +78,12 @@ class DriverResource extends Resource
     {
         return 'Operasional';
     }
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
+    public static function getNavigationBadgeTooltip(): ?string
+    {
+        return 'Jumlah Driver';
+    }
 }

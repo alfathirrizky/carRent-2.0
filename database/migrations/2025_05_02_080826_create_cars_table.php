@@ -19,6 +19,7 @@ return new class extends Migration
             $table->enum('seater', ['5 Seater', '7 Seater']);
             $table->enum('kategori', ['MPV', 'SUV', 'HATCHBACK']);
             $table->string('gambar_mobil');
+            $table->string('status')->default('Ready');
             $table->timestamps();
         });
     }

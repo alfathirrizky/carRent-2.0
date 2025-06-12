@@ -11,6 +11,7 @@ use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
+use Filament\Tables\Columns\SelectColumn;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\CarResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -66,8 +67,12 @@ class CarResource extends Resource
                 Tables\Columns\TextColumn::make('tipe')->searchable(),
                 Tables\Columns\TextColumn::make('seater')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('kategori')->searchable(),
-                Tables\Columns\ImageColumn::make('gambar_mobil')->label('Image')->square()->width(110)->height(55)->searchable()->visibility('public')->disk('public')
-
+                Tables\Columns\ImageColumn::make('gambar_mobil')->label('Image')->square()->width(110)->height(55)->searchable()->visibility('public')->disk('public'),
+                SelectColumn::make('status')
+                    ->options([
+                        'Ready' => 'Ready',
+                        'Maintenance' => 'Maintenance',
+                    ])->rules(['required'])->selectablePlaceholder(false)
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('kategori')
