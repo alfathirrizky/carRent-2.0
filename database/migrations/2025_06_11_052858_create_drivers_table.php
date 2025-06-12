@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('prices', function (Blueprint $table) {
+        Schema::create('drivers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('car_id')->constrained()->onDelete('cascade');
-            $table->string('durasi');
-            $table->integer('harga');
+            $table->string('nama');
+            $table->string('umur');
+            $table->string('alamat');
+            $table->enum('jns_kelamin', ['Laki-Laki', 'Perempuan']);
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('prices');
+        Schema::dropIfExists('drivers');
     }
 };

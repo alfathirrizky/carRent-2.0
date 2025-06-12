@@ -10,6 +10,7 @@ class Booking extends Model
         'nama',
         'telepon',
         'mobil',
+        'transmisi',
         'durasi',
         'harga',
         'metode_pembayaran',
@@ -18,5 +19,9 @@ class Booking extends Model
     public function price()
     {
         return $this->belongsTo(Price::class);
+    }
+    public function car()
+    {
+        return $this->belongsTo(Car::class);
     }
 }

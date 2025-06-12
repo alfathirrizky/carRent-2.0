@@ -2,7 +2,7 @@
     <nav class="bg-white border-gray-200 fixed top-0 right-0 left-0">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="{{ url('img/logo.svg') }}" class="h-12" alt="Flowbite Logo" />
+                <img src="{{ url('img/logo.svg') }}" class="h-9" alt="Carrent Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap">Car Rent</span>
             </a>
             <button data-collapse-toggle="navbar-default" type="button"
@@ -32,9 +32,8 @@
                             class="block py-2 px-3 {{ request()->is('location') ? 'text-black bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0' : 'text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0' }}">Location</a>
                     </li>
                     <li>
-                        <a href="/contact us"
-                            class="block py-2 px-3 {{ request()->is('contact us') ? 'text-black bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0' : 'text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0' }}">Contact
-                            Us</a>
+                        <a href="/service"
+                            class="block py-2 px-3 {{ request()->is('service') ? 'text-black bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0' : 'text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0' }}">Service</a>
                     </li>
                 </ul>
             </div>

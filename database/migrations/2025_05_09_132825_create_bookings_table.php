@@ -16,10 +16,12 @@ return new class extends Migration
             $table->string('nama');
             $table->string('telepon');
             $table->string('mobil');
+            $table->string('transmisi');
             $table->string('durasi');
             $table->integer('harga');
             $table->enum('metode_pembayaran', ['Cash', 'Transfer']);
             $table->date('tanggal_booking');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

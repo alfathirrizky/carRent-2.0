@@ -6,6 +6,7 @@ use App\Models\Review;
 use App\Models\Transaction;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\BookingController;
 
@@ -45,6 +46,9 @@ Route::get('/booking', function () {
 Route::get('/testimoni', function () {
     return view('formReview');
 });
+Route::get('/service', function () {
+    return view('servicePage');
+});
 
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 
@@ -58,16 +62,10 @@ Route::get('/booking/{id}', [BookingController::class, 'create']);
 
 Route::get('/booking/{id}', [BookingController::class, 'create'])->name('booking.create');
 
-Route::get('/booking/{id}', [BookingController::class, 'create'])->name('booking.create');
-
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
-
-Route::post('/booking/store', [BookingController::class, 'store'])->name('booking.store');
 
 Route::get('/booking/{id}', [BookingController::class, 'show'])->name('booking.detail');
 
-Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
-
 Route::get('/booking/create/{id}', [BookingController::class, 'create'])->name('booking.create');
 
-
+Route::get('/order/{id}/download', [OrderController::class, 'download'])->name('order.download');
