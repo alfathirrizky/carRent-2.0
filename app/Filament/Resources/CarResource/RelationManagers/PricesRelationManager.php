@@ -32,7 +32,11 @@ class PricesRelationManager extends RelationManager
                 Forms\Components\TextInput::make('harga')
                     ->numeric()
                     ->required()
-                    ->label('Harga (Rp)'),
+                    ->label('Harga Sewa'),
+                Forms\Components\TextInput::make('setoran')
+                    ->numeric()
+                    ->required()
+                    ->label('Harga Setoran'),
             ]);
     }
 
@@ -43,6 +47,9 @@ class PricesRelationManager extends RelationManager
             ->columns([
                 Tables\Columns\TextColumn::make('durasi'),
                 Tables\Columns\TextColumn::make('harga')->formatStateUsing(
+                    fn($state) => 'Rp ' . number_format($state, 0, ',', '.')
+                ),
+                Tables\Columns\TextColumn::make('setoran')->formatStateUsing(
                     fn($state) => 'Rp ' . number_format($state, 0, ',', '.')
                 ),
             ])

@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('nama');
             $table->string('umur');
             $table->string('alamat');
-            $table->enum('jns_kelamin', ['Laki-Laki', 'Perempuan']);
+            $table->enum('jns_kelamin', ['Pria', 'Perempuan']);
+            $table->string('no_telepon');
+            $table->string('data_diri');
             $table->timestamps();
         });
     }

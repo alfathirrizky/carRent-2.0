@@ -111,7 +111,7 @@
                         class="flex items-center justify-between w-full py-4 font-medium text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
                         data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
                         aria-controls="accordion-flush-body-1">
-                        <span class=" text-black" >What is Flowbite?</span>
+                        <span class=" text-black">What is Flowbite?</span>
                         <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -174,7 +174,48 @@
             </div>
         </div>
     </section>
-
+    {{-- our service --}}
+    <section id="ourService" class=" m-3 flex flex-col items-center gap-3">
+        <h1 class=" text-3xl font-bold">Our Service</h1>
+        <div class=" flex flex-col lg:flex-row gap-2">
+            <div class=" bg-blue-900 p-4 rounded-2xl flex justify-center items-center lg:gap-5">
+                <div>
+                    <h1 class=" text-white font-bold text-xl mb-1 lg:text-2xl">CAR RENTAL</h1>
+                    <p class=" text-white text-3xs lg:text-sm mb-1 lg:mb-3 lg:w-md">Rental mobil adalah layanan
+                        penyewaan
+                        kendaraan roda empat kepada
+                        individu atau perusahaan untuk jangka waktu tertentu, dengan biaya sewa yang disepakati. Layanan
+                        ini
+                        bisa digunakan untuk berbagai keperluan seperti perjalanan pribadi, liburan, perjalanan bisnis,
+                        atau
+                        operasional perusahaan.</p>
+                    <a href="{{ url('/cars') }}"
+                        class=" text-blue-900 bg-white text-xs lg:text-base font-medium rounded-2xl px-5">lebih
+                        detail</a>
+                </div>
+                <div>
+                    <img src="{{ url('img/deal.jpeg') }}" class=" w-full h-full rounded-2xl" alt="">
+                </div>
+            </div>
+            <div class=" bg-blue-900 p-5 rounded-2xl flex justify-center items-center lg:gap-5">
+                <div>
+                    <h1 class=" text-white font-bold text-xl mb-1">PARTNERSHIP</h1>
+                    <p class=" text-white text-3xs mb-2 lg:text-sm lg:mb-3 lg:w-md">Rental mobil adalah
+                        layanan
+                        penyewaan kendaraan roda empat kepada
+                        individu atau perusahaan untuk jangka waktu tertentu, dengan biaya sewa yang disepakati. Layanan
+                        ini
+                        bisa digunakan untuk berbagai keperluan seperti perjalanan pribadi, liburan, perjalanan bisnis,
+                        atau
+                        operasional perusahaan.</p>
+                    <a href="{{ url('/partnership') }}"
+                        class="text-blue-900 bg-white text-xs lg:text-base font-medium rounded-2xl px-5">lebih
+                        detail</a>
+                </div>
+                <img src="{{ url('img/kemitraan.jpeg') }}" class=" w-60 h-40 rounded-2xl" alt="">
+            </div>
+        </div>
+    </section>
     {{-- car list --}}
     <section id="mostRent" class="w-full flex flex-col gap-5 px-5">
         <div class="flex justify-between items-center">
@@ -219,7 +260,6 @@
             @endforeach
         </div>
     </section>
-
     {{-- testimoni --}}
     <section id="testimoni" class="p-5 m-5 my-9 bg-blue-900 rounded-lg flex flex-col gap-5">
         <div class="text flex items-end justify-between">
@@ -240,6 +280,20 @@
                     <div class="profile flex items-center gap-2">
                         <h1 class=" font-semibold">{{ $review->nama }}</h1>
                     </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
+    {{-- contact us --}}
+    <section id="contactUs" class=" bg-blue-900 p-5 flex flex-col items-center justify-center gap-5">
+        <h1 class=" text-white font-bold text-2xl lg:text-4xl">Contact Us</h1>
+        <div class="cardContact flex gap-2">
+            @foreach ($admins as $admin)
+                <div class=" bg-white rounded-2xl shadow-md flex flex-col p-5 items-center">
+                    <img src="{{ url('img/fortuner.png') }}" alt="profile" class=" w-30 lg:w-3xs">
+                    <h1 class=" font-bold mb-2 lg:text-2xl">{{ $admin['nama'] }}</h1>
+                    <a href="{{ $admin['link_whatsapp'] }}"
+                        class=" bg-blue-900 text-white font-semibold px-5 rounded-2xl text-base">Chat</a>
                 </div>
             @endforeach
         </div>

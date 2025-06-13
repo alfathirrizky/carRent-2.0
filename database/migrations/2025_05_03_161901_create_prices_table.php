@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('car_id')->constrained()->onDelete('cascade');
             $table->string('durasi');
             $table->integer('harga');
+            $table->integer('setoran');
             $table->timestamps();
         });
     }

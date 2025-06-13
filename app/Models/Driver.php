@@ -10,6 +10,8 @@ class Driver extends Model
         'nama',
         'umur',
         'alamat',
-        'jns_kelamin'
+        'jns_kelamin',
+        'no_telepon',
+        'data_diri'
     ];
 }

@@ -26,6 +26,8 @@ class DriverResource extends Resource
                 Forms\Components\Card::make()
                     ->schema([
                         Forms\Components\TextInput::make('nama')->placeholder('Masukkan Nama')->label('Nama Driver')->required(),
+                        Forms\Components\TextInput::make('no_telepon')->placeholder('Masukkan Nama')->label('Nama Driver')->required(),
+                        Forms\Components\TextInput::make('no_telepon')->placeholder('Masukkan Nama')->label('Nama Driver')->required(),
                         Forms\Components\TextInput::make('umur')->placeholder('Masukkan Umur')->label('Umur Driver')->required(),
                         Forms\Components\TextInput::make('alamat')->placeholder('Masukkan Alamat')->label('Alamat')->required(),
                         Forms\Components\Select::make('jns_kelamin')->options([
@@ -44,6 +46,8 @@ class DriverResource extends Resource
                 Tables\Columns\TextColumn::make('umur')->label('Umur Driver')->searchable(),
                 Tables\Columns\TextColumn::make('alamat')->label('Alamat')->searchable(),
                 Tables\Columns\TextColumn::make('jns_kelamin')->label('Jenis Kelamin')->searchable(),
+                Tables\Columns\TextColumn::make('no_telepon')->label('Nomer Telepon')->searchable(),
+                Tables\Columns\ImageColumn::make('data_diri')->label('Image')->square()->width(110)->height(55)->searchable()->visibility('public')->disk('public'),
             ])
             ->filters([
                 //

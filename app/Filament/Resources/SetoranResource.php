@@ -2,16 +2,18 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SetoranResource\Pages;
-use App\Filament\Resources\SetoranResource\RelationManagers;
-use App\Models\Setoran;
+use App\Models\Car;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Setoran;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\SetoranResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\SetoranResource\RelationManagers;
+use App\Models\Driver;
 
 class SetoranResource extends Resource
 {
@@ -25,8 +27,16 @@ class SetoranResource extends Resource
             ->schema([
                 Forms\Components\Card::make()
                     ->schema([
-                        Forms\Components\TextInput::make('nama')->placeholder('Masukkan Nama')->label('Nama Driver')->required(),
-                        Forms\Components\TextInput::make('mobil')->placeholder('Masukkan Nama Mobil')->label('Nama Mobil')->required(),
+                        Forms\Components\Select::make('driver_id')
+                            ->options(Driver::all()
+                            ->pluck('nama', 'id'))
+                            ->label('Nama Driver')
+                            ->required(),
+                        Forms\Components\Select::make('car_id')
+                            ->options(Car::all()
+                            ->pluck('nama_mobil', 'id'))
+                            ->label('Mobil')
+                            ->required(),
                         Forms\Components\DatePicker::make('tanggal_Setoran')->label('Tanggal Setoran')->required(),
                         Forms\Components\TextInput::make('harga')->placeholder('Masukkan Jumlah Setoran')->label('Jumlah Setoran')->required(),
                     ])
@@ -37,8 +47,8 @@ class SetoranResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nama')->label('Nama Driver')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('mobil')->label('Nama Mobil')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('driver.nama')->label('Nama Driver')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('car.nama_mobil')->label('Nama Mobil')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('tanggal_Setoran')->label('Tanggal Setoran')->searchable(),
                 Tables\Columns\TextColumn::make('harga')->label('Jumlah Setoran')->searchable()->formatStateUsing(
                     fn($state) => 'Rp ' . number_format($state, 0, ',', '.')

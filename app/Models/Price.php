@@ -12,7 +12,8 @@ class Price extends Model
 
     protected $fillable = [
         'durasi',
-        'harga'
+        'harga',
+        'setoran'
     ];
 
     public function car(): BelongsTo

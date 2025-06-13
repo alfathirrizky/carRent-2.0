@@ -7,11 +7,22 @@ use App\Models\Transaction;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\DriverController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\BookingController;
+use App\Models\Price;
+
+// Route::get('/', function () {
+//     return view('welcome', ['title' => 'car list', 'cars' => Car::all(), 'reviews' => Review::all()], ['title' => 'contact us', 'admins' => Admin::all()]);
+// });
 
 Route::get('/', function () {
-    return view('welcome', ['title' => 'car list', 'cars' => Car::all(), 'reviews' => Review::all()]);
+    return view('welcome', [
+        'title' => 'Homepage',
+        'cars' => Car::all(),
+        'reviews' => Review::all(),
+        'admins' => Admin::all(),
+    ]);
 });
 
 Route::get('/review', function () {
@@ -20,6 +31,11 @@ Route::get('/review', function () {
 
 Route::get('/cars', function () {
     return view('carsList', ['title' => 'car detail', 'cars' => Car::all()]);
+});
+
+Route::get('/partnership', function ($id) {
+    $car = Car::find($id);
+    return view('partnership', ['title' => 'partnership', 'car' => $car]);
 });
 
 Route::get('/car detail/{id}', function ($id) {
@@ -49,6 +65,9 @@ Route::get('/testimoni', function () {
 Route::get('/service', function () {
     return view('servicePage');
 });
+Route::get('/formKemitraan', function () {
+    return view('daftarMitra');
+});
 
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 
@@ -69,3 +88,7 @@ Route::get('/booking/{id}', [BookingController::class, 'show'])->name('booking.d
 Route::get('/booking/create/{id}', [BookingController::class, 'create'])->name('booking.create');
 
 Route::get('/order/{id}/download', [OrderController::class, 'download'])->name('order.download');
+
+Route::post('/driver', [DriverController::class, 'store'])->name('driver.store');
+
+Route::post('/driver/create', [DriverController::class, 'create'])->name('driver.create');

@@ -16,7 +16,7 @@
             @foreach ($cars as $car)
                 <div class="flex flex-col gap-3 bg-white rounded-2xl shadow-sm p-3">
                     <div class="flex items-center justify-center p-2">
-                        <img class="object-contain w-40 h-16 lg:w-6xl lg:h-3xl" src="{{ asset('storage/' . $car->gambar_mobil) }}"
+                        <img class="object-contain w-full h-20 lg:h-40 " src="{{ asset('storage/' . $car->gambar_mobil) }}"
                             alt="" srcset="">
                     </div>
                     <div class="flex justify-between items-center">

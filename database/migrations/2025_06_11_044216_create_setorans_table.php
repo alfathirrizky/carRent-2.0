@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('setorans', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('mobil');
+            $table->string('driver_id')->constrained()->onDelete('cascade');
+            $table->string('car_id')->constrained()->onDelete('cascade');
             $table->date('tanggal_Setoran');
             $table->integer('harga');
             $table->timestamps();

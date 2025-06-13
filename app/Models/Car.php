@@ -26,4 +26,8 @@ class Car extends Model
     {
         return $this->hasMany(Price::class);
     }
+    public function pricesetorans(): HasMany
+    {
+        return $this->hasMany(Setoran::class);
+    }
 }
