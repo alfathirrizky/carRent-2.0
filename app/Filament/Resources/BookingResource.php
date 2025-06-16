@@ -137,4 +137,8 @@ class BookingResource extends Resource
     {
         return parent::getEloquentQuery()->with('price');
     }
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Customer';
+    }
 }

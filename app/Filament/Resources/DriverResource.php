@@ -17,7 +17,7 @@ class DriverResource extends Resource
 {
     protected static ?string $model = Driver::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'untitledui-user';
 
     public static function form(Form $form): Form
     {
@@ -26,14 +26,14 @@ class DriverResource extends Resource
                 Forms\Components\Card::make()
                     ->schema([
                         Forms\Components\TextInput::make('nama')->placeholder('Masukkan Nama')->label('Nama Driver')->required(),
-                        Forms\Components\TextInput::make('no_telepon')->placeholder('Masukkan Nama')->label('Nama Driver')->required(),
-                        Forms\Components\TextInput::make('no_telepon')->placeholder('Masukkan Nama')->label('Nama Driver')->required(),
                         Forms\Components\TextInput::make('umur')->placeholder('Masukkan Umur')->label('Umur Driver')->required(),
-                        Forms\Components\TextInput::make('alamat')->placeholder('Masukkan Alamat')->label('Alamat')->required(),
+                        Forms\Components\TextInput::make('alamat')->placeholder('Masukkan Alamat')->label('Alamat Driver')->required(),
                         Forms\Components\Select::make('jns_kelamin')->options([
                             'Laki-Laki' => 'Laki-Laki',
                             'Perempuan' => 'Perempuan'
                         ])->label('Jenis Kelamin')->placeholder('Pilih Jenis Kelamin')->required(),
+                        Forms\Components\TextInput::make('no_telepon')->placeholder('Masukkan Nama')->label('Nomor Driver')->required(),
+                        Forms\Components\FileUpload::make('data_diri')->image()->imageEditor()->imagePreviewHeight('250')->directory('mobil')->preserveFilenames()->maxSize(10240)->label('Data Diri')->placeholder('Masukkan Data Diri')->acceptedFileTypes(['image/jpeg', 'image/png'])->visibility('public')->disk('public')->required()
                     ])
             ]);
     }

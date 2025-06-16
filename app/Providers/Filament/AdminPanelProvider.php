@@ -41,7 +41,8 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
+                // Widgets\AccountWidget::class,
+                // // Widgets\StatsOverviewWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -58,8 +59,9 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->navigationGroups([
-                NavigationGroup::make()->label('Operasional'),
                 NavigationGroup::make()->label('Unit'),
+                NavigationGroup::make()->label('Operasional'),
+                NavigationGroup::make()->label('Customer'),
             ]);
     }
 }

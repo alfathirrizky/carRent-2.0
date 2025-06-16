@@ -197,22 +197,24 @@
                     <img src="{{ url('img/deal.jpeg') }}" class=" w-full h-full rounded-2xl" alt="">
                 </div>
             </div>
-            <div class=" bg-blue-900 p-5 rounded-2xl flex justify-center items-center lg:gap-5">
+            <div class=" bg-blue-900 p-4 rounded-2xl flex justify-center items-center lg:gap-5">
                 <div>
-                    <h1 class=" text-white font-bold text-xl mb-1">PARTNERSHIP</h1>
-                    <p class=" text-white text-3xs mb-2 lg:text-sm lg:mb-3 lg:w-md">Rental mobil adalah
-                        layanan
-                        penyewaan kendaraan roda empat kepada
+                    <h1 class=" text-white font-bold text-xl mb-1 lg:text-2xl">CAR RENTAL</h1>
+                    <p class=" text-white text-3xs lg:text-sm mb-1 lg:mb-3 lg:w-md">Rental mobil adalah layanan
+                        penyewaan
+                        kendaraan roda empat kepada
                         individu atau perusahaan untuk jangka waktu tertentu, dengan biaya sewa yang disepakati. Layanan
                         ini
                         bisa digunakan untuk berbagai keperluan seperti perjalanan pribadi, liburan, perjalanan bisnis,
                         atau
                         operasional perusahaan.</p>
                     <a href="{{ url('/partnership') }}"
-                        class="text-blue-900 bg-white text-xs lg:text-base font-medium rounded-2xl px-5">lebih
+                        class=" text-blue-900 bg-white text-xs lg:text-base font-medium rounded-2xl px-5">lebih
                         detail</a>
                 </div>
-                <img src="{{ url('img/kemitraan.jpeg') }}" class=" w-60 h-40 rounded-2xl" alt="">
+                <div>
+                    <img src="{{ url('img/deal.jpeg') }}" class=" w-full h-full rounded-2xl" alt="">
+                </div>
             </div>
         </div>
     </section>

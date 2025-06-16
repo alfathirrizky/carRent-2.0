@@ -20,6 +20,7 @@ class UnexpectedCostResource extends Resource
     protected static ?string $model = UnexpectedCost::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationLabel = 'Dana Darurat';
 
     public static function form(Form $form): Form
     {

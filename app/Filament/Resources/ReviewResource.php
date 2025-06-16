@@ -69,4 +69,8 @@ class ReviewResource extends Resource
     {
         return 'The number of reviews';
     }
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Customer';
+    }
 }
