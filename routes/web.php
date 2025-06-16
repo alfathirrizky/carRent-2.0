@@ -33,9 +33,8 @@ Route::get('/cars', function () {
     return view('carsList', ['title' => 'car detail', 'cars' => Car::all()]);
 });
 
-Route::get('/partnership', function ($id) {
-    $car = Car::find($id);
-    return view('partnership', ['title' => 'partnership', 'car' => $car]);
+Route::get('/partnership', function () {
+    return view('partnership', ['title' => 'partnership', 'cars' => Car::all()]);
 });
 
 Route::get('/car detail/{id}', function ($id) {
