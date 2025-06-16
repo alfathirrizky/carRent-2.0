@@ -29,7 +29,7 @@ class DriverResource extends Resource
                         Forms\Components\TextInput::make('umur')->placeholder('Masukkan Umur')->label('Umur Driver')->required(),
                         Forms\Components\TextInput::make('alamat')->placeholder('Masukkan Alamat')->label('Alamat Driver')->required(),
                         Forms\Components\Select::make('jns_kelamin')->options([
-                            'Laki-Laki' => 'Laki-Laki',
+                            'Pria' => 'Pria',
                             'Perempuan' => 'Perempuan'
                         ])->label('Jenis Kelamin')->placeholder('Pilih Jenis Kelamin')->required(),
                         Forms\Components\TextInput::make('no_telepon')->placeholder('Masukkan Nama')->label('Nomor Driver')->required(),
