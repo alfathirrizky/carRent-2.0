@@ -175,9 +175,9 @@
         </div>
     </section>
     {{-- our service --}}
-    <section id="ourService" class=" m-3 flex flex-col items-center gap-3">
-        <h1 class=" text-3xl font-bold">Our Service</h1>
-        <div class=" flex flex-col lg:flex-row gap-2">
+    <section id="ourService" class=" m-10 flex flex-col items-center gap-5">
+        <h1 class=" text-4xl font-bold">Our Service</h1>
+        <div class=" flex flex-col lg:flex-row gap-5">
             <div class=" bg-blue-900 p-4 rounded-2xl flex justify-center items-center lg:gap-5">
                 <div>
                     <h1 class=" text-white font-bold text-xl mb-1 lg:text-2xl">CAR RENTAL</h1>

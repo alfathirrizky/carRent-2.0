@@ -24,7 +24,7 @@
                             aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="/cars"
+                        <a href="#mostRent"
                             class="block py-2 px-3 {{ request()->is('cars') ? 'text-black bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0' : 'text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0' }}">Cars</a>
                     </li>
                     <li>
