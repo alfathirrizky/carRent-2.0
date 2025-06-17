@@ -13,6 +13,7 @@ use Filament\Forms\Components\Card;
 use Filament\Forms\Components\DatePicker;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportAction;
 use App\Filament\Resources\CarMaintenanceResource\Pages;
 use App\Filament\Resources\CarMaintenanceResource\RelationManagers;
 
@@ -72,6 +73,9 @@ class CarMaintenanceResource extends Resource
             ->filters([
                 //
             ])
+            ->headerActions([
+                ExportAction::make()
+            ])
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
@@ -102,4 +106,5 @@ class CarMaintenanceResource extends Resource
     {
         return 'Unit';
     }
+    
 }

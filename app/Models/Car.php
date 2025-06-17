@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Car extends Model
 {
@@ -30,8 +30,8 @@ class Car extends Model
     {
         return $this->hasMany(Setoran::class);
     }
-    public function cicilan(): HasMany
+    public function cicilan(): HasOne
     {
-        return $this->hasMany(cicilan::class);
+        return $this->hasOne(cicilan::class);
     }
 }

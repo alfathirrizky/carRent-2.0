@@ -12,6 +12,7 @@ use App\Models\UnexpectedCost;
 use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportAction;
 use App\Filament\Resources\UnexpectedCostResource\Pages;
 use App\Filament\Resources\UnexpectedCostResource\RelationManagers;
 
@@ -68,6 +69,9 @@ class UnexpectedCostResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
+            ])
+            ->headerActions([
+                ExportAction::make()
             ]);
     }
 

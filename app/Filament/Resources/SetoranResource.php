@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Models\Car;
 use Filament\Forms;
 use Filament\Tables;
+use App\Models\Driver;
 use App\Models\Setoran;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
@@ -12,8 +13,8 @@ use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\SetoranResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportAction;
 use App\Filament\Resources\SetoranResource\RelationManagers;
-use App\Models\Driver;
 
 class SetoranResource extends Resource
 {
@@ -65,6 +66,9 @@ class SetoranResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
+            ])
+            ->headerActions([
+                ExportAction::make()
             ]);
     }
 
