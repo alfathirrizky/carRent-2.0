@@ -30,4 +30,8 @@ class Car extends Model
     {
         return $this->hasMany(Setoran::class);
     }
+    public function cicilan(): HasMany
+    {
+        return $this->hasMany(cicilan::class);
+    }
 }
