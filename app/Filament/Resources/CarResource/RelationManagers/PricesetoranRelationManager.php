@@ -10,41 +10,33 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class PricesRelationManager extends RelationManager
+class PricesetoranRelationManager extends RelationManager
 {
-    protected static string $relationship = 'prices';
-    protected static ?string $title = 'Harga & Durasi';
+    protected static string $relationship = 'pricesetorans';
+    protected static ?string $title = 'Harga Setoran';
 
     public function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('durasi')
-                    ->options([
-                        '12 Jam' => '12 Jam',
-                        '24 Jam' => '24 Jam',
-                        '36 Jam' => '36 Jam',
-                        '48 Jam' => '48 Jam',
-                        '60 Jam' => '60 Jam',
-                        '72 Jam' => '72 Jam',
-                    ])
-                    ->required(),
-                Forms\Components\TextInput::make('harga')
-                    ->numeric()
+                Forms\Components\TextInput::make('jumlah_setoran')
                     ->required()
-                    ->label('Harga Sewa'),
+                    ->label('Jumlah Setoran')
+                    ->maxLength(255)
             ]);
     }
 
     public function table(Table $table): Table
     {
         return $table
-            ->recordTitleAttribute('label')
+            ->recordTitleAttribute('pricesetorans')
             ->columns([
-                Tables\Columns\TextColumn::make('durasi'),
-                Tables\Columns\TextColumn::make('harga')->formatStateUsing(
+                Tables\Columns\TextColumn::make('jumlah_setoran')->label('Jumlah Setoran')->searchable()->formatStateUsing(
                     fn($state) => 'Rp ' . number_format($state, 0, ',', '.')
                 ),
+            ])
+            ->filters([
+                //
             ])
             ->headerActions([
                 Tables\Actions\CreateAction::make(),
@@ -54,7 +46,9 @@ class PricesRelationManager extends RelationManager
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\DeleteBulkAction::make(),
+                ]),
             ]);
     }
 }

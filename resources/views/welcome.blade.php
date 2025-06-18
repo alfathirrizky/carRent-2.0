@@ -175,10 +175,11 @@
         </div>
     </section>
     {{-- our service --}}
-    <section id="ourService" class=" m-10 flex flex-col items-center gap-5">
+    <section id="ourService" class=" m-5 lg:m-10 flex flex-col items-center gap-5">
         <h1 class=" text-4xl font-bold">Our Service</h1>
         <div class=" flex flex-col lg:flex-row gap-5">
-            <div class=" bg-blue-900 p-4 rounded-2xl flex justify-center items-center lg:gap-5">
+            <div
+                class=" bg-blue-900 p-5 rounded-2xl flex flex-col-reverse gap-2 lg:flex-row justify-center items-center lg:gap-5">
                 <div>
                     <h1 class=" text-white font-bold text-xl mb-1 lg:text-2xl">CAR RENTAL</h1>
                     <p class=" text-white text-3xs lg:text-sm mb-1 lg:mb-3 lg:w-md">Rental mobil adalah layanan
@@ -194,10 +195,11 @@
                         detail</a>
                 </div>
                 <div>
-                    <img src="{{ url('img/deal.jpeg') }}" class=" w-full h-full rounded-2xl" alt="">
+                    <img src="{{ url('img/deal.jpeg') }}" class="rounded-2xl" alt="">
                 </div>
             </div>
-            <div class=" bg-blue-900 p-4 rounded-2xl flex justify-center items-center lg:gap-5">
+            <div
+                class=" bg-blue-900 p-5 rounded-2xl flex flex-col-reverse gap-2 lg:flex-row justify-center items-center lg:gap-5">
                 <div>
                     <h1 class=" text-white font-bold text-xl mb-1 lg:text-2xl">Partnership</h1>
                     <p class=" text-white text-3xs lg:text-sm mb-1 lg:mb-3 lg:w-md">Rental mobil adalah layanan
@@ -304,7 +306,7 @@
     <section class=" flex flex-col items-center pt-9 pb-5" id="location">
         <h1 class=" text-2xl font-bold text-blue-700 md:text-3xl lg:text-4xl">Our Location</h1>
         <p class=" text-md font-medium mb-5 md:text-lg">Jl.Ahmad ausyah maulana</p>
-        <iframe class=" max-w-full h-96 px-7 rounde-2xl mb-5 md:w-2xl lg:w-full"
+        <iframe class=" max-w-full h-96 rounde-2xl mb-5 md:w-2xl lg:w-full"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.383096811518!2d106.82274541476967!3d-6.175392795528637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3eecae45eb9%3A0x301576d14febd40!2sMonas!5e0!3m2!1sid!2sid!4v1651234567890!5m2!1sid!2sid"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>

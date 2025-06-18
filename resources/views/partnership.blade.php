@@ -74,9 +74,9 @@
                             </div>
                         </div>
                         <div class=" flex justify-start">
-                            @foreach ($car->prices as $price)
+                            @foreach ($car->pricesetorans as $pricesetoran)
                                 <p class=" font-semibold text-xs lg:text-lg">Rp.
-                                    {{ number_format($price->setoran, 0, ',', '.') }}/day
+                                    {{ number_format($pricesetoran->jumlah_setoran, 0, ',', '.') }}/day
                                 </p>
                             @endforeach
                         </div>

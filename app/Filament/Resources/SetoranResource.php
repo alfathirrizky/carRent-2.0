@@ -19,8 +19,7 @@ use App\Filament\Resources\SetoranResource\RelationManagers;
 class SetoranResource extends Resource
 {
     protected static ?string $model = Setoran::class;
-
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'pepicon-money-note-circle';
 
     public static function form(Form $form): Form
     {

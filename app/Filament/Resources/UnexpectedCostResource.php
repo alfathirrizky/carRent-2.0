@@ -19,8 +19,7 @@ use App\Filament\Resources\UnexpectedCostResource\RelationManagers;
 class UnexpectedCostResource extends Resource
 {
     protected static ?string $model = UnexpectedCost::class;
-
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'pepicon-money-note-circle-off';
     protected static ?string $navigationLabel = 'Dana Darurat';
 
     public static function form(Form $form): Form

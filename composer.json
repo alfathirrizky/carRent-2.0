@@ -11,6 +11,8 @@
         "barryvdh/laravel-dompdf": "^3.1",
         "bezhansalleh/filament-shield": "^3.3",
         "codeat3/blade-eos-icons": "^1.15",
+        "codeat3/blade-iconpark": "^1.7",
+        "codeat3/blade-pepicons": "^1.6",
         "filament/filament": "3.3",
         "filament/widgets": "3.3",
         "laravel/framework": "^12.0",

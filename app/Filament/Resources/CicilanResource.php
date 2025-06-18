@@ -17,8 +17,8 @@ use App\Filament\Resources\CicilanResource\RelationManagers;
 class CicilanResource extends Resource
 {
     protected static ?string $model = Cicilan::class;
-
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationLabel = 'Cicilan';
+    protected static ?string $navigationIcon = 'iconpark-credit';
 
     public static function form(Form $form): Form
     {

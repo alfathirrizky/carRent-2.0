@@ -17,6 +17,7 @@ use App\Filament\Resources\CarResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\CarResource\RelationManagers\PricesRelationManager;
 use App\Filament\Resources\CarResource\RelationManagers\CicilanRelationManager;
+use App\Filament\Resources\CarResource\RelationManagers\PricesetoranRelationManager;
 
 
 class CarResource extends Resource
@@ -100,6 +101,7 @@ class CarResource extends Resource
     {
         return [
             PricesRelationManager::class,
+            PricesetoranRelationManager::class,
             CicilanRelationManager::class,
         ];
     }

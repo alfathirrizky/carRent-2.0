@@ -16,7 +16,7 @@
             srcset="">
         <div class="flex flex-col items-center mb-5 gap-3">
             <h1 class=" text-3xl font-bold lg:text-4xl">{{ $car['nama_mobil'] }}</h1>
-            <h1 class=" status bg-blue-800 text-white py-1 font-medium px-4 rounded-3xl">Status: {{ $car['status'] }}</h1>
+            <h1 class=" text-sm lg:text-base status bg-blue-800 text-white py-1 font-medium px-4 rounded-3xl">Status: {{ $car['status'] }}</h1>
         </div>
         <div class="spesifikasi flex items-center justify-center gap-10 lg:gap-40 mb-5">
             <div class="flex gap-2 items-center">
