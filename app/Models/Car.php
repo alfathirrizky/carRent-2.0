@@ -26,12 +26,12 @@ class Car extends Model
     {
         return $this->hasMany(Price::class);
     }
-    public function pricesetorans(): HasOne
+    public function pricesetorans(): HasMany
     {
-        return $this->hasOne(PriceSetoran::class);
+        return $this->hasMany(PriceSetoran::class);
     }
-    public function cicilan(): HasOne
+    public function cicilan(): HasMany
     {
-        return $this->hasOne(cicilan::class);
+        return $this->hasMany(cicilan::class);
     }
 }
