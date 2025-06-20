@@ -13,6 +13,8 @@ use App\Filament\Resources\CicilanResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use pxlrbt\FilamentExcel\Actions\Tables\ExportAction;
 use App\Filament\Resources\CicilanResource\RelationManagers;
+use App\Models\Car;
+use Filament\Forms\Components\TextInput;
 
 class CicilanResource extends Resource
 {
@@ -24,7 +26,18 @@ class CicilanResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Select::make('car_id')
+                    ->options(Car::all()
+                        ->pluck('nama_mobil', 'id'))
+                    ->label('Nama Mobil')
+                    ->required(),
+                Forms\Components\TextInput::make('nominal')
+                    ->required()
+                    ->label('Jumlah Dibayar')
+                    ->maxLength(255),
+                Forms\Components\DatePicker::make('tanggal_cicilan')
+                    ->label('Tanggal Bayar')
+                    ->required(),
             ]);
     }
 
@@ -42,7 +55,7 @@ class CicilanResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -65,7 +78,6 @@ class CicilanResource extends Resource
     {
         return [
             'index' => Pages\ListCicilans::route('/'),
-            'create' => Pages\CreateCicilan::route('/create'),
             'edit' => Pages\EditCicilan::route('/{record}/edit'),
         ];
     }

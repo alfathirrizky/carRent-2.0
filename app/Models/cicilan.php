@@ -10,6 +10,7 @@ class cicilan extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'car_id',
         'nominal',
         'tanggal_cicilan'
     ];
