@@ -4,6 +4,7 @@ namespace App\Filament\Widgets;
 
 use App\Models\Review;
 use App\Models\Booking;
+use App\Models\CarMaintenance;
 use App\Models\cicilan;
 use App\Models\Setoran;
 use App\Models\UnexpectedCost;
@@ -14,13 +15,13 @@ class StatsOverview extends BaseWidget
 {
     protected function getStats(): array
     {
+        $totalPemasukan = Setoran::sum('harga') + Booking::sum('harga');
+        $totalPengeluaran = UnexpectedCost::sum('harga') + Cicilan::sum('nominal') + CarMaintenance::sum('harga');
+        $keuntunganBersih = $totalPemasukan - $totalPengeluaran;
         return [
-            Stat::make('Jumlah Booking', Booking::count())
-                ->description('Total semua booking')
-                ->color('primary'),
-            Stat::make('Jumlah Reviews', Review::count())
-                ->description('Total semua booking')
-                ->color('primary'),
+            Stat::make('Total Keuntungan Bersih', 'Rp ' . number_format($keuntunganBersih, 0, ',', '.'))
+                ->description('Dari semua Setoran')
+                ->color('info'),
             Stat::make('Total Pemasukan', 'Rp ' . number_format(Setoran::sum('harga'), 0, ',', '.'))
                 ->description('Dari semua Setoran')
                 ->color('info'),
@@ -33,6 +34,12 @@ class StatsOverview extends BaseWidget
             Stat::make('Total Cicilan', 'Rp ' . number_format(cicilan::sum('nominal'), 0, ',', '.'))
                 ->description('Dari semua cicilan')
                 ->color('info'),
+            Stat::make('Jumlah Booking', Booking::count())
+                ->description('Total semua booking')
+                ->color('primary'),
+            Stat::make('Jumlah Reviews', Review::count())
+                ->description('Total semua booking')
+                ->color('primary'),
         ];
     }
 }
