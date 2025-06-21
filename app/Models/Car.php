@@ -34,4 +34,8 @@ class Car extends Model
     {
         return $this->hasMany(cicilan::class);
     }
+    public function maintenance(): HasMany
+    {
+        return $this->hasMany(CarMaintenance::class);
+    }
 }
