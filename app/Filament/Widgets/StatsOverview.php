@@ -16,7 +16,7 @@ class StatsOverview extends BaseWidget
     protected function getStats(): array
     {
         $totalPemasukan = Setoran::sum('harga') + Booking::sum('harga');
-        $totalPengeluaran = UnexpectedCost::sum('harga') + Cicilan::sum('nominal') + CarMaintenance::sum('harga');
+        $totalPengeluaran = UnexpectedCost::sum('harga') + CarMaintenance::sum('harga');
         $keuntunganBersih = $totalPemasukan - $totalPengeluaran;
         return [
             Stat::make('Total Keuntungan Bersih', 'Rp ' . number_format($keuntunganBersih, 0, ',', '.'))
