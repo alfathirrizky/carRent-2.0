@@ -21,14 +21,13 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('testimoni.store') }}"
+        <form method="POST" action="{{ route('testimoni.store') }}" id="createForm"
             class="bookForm rounded-3xl bg-blue-700 w-full max-w-xl flex flex-col items-center p-8 gap-4">
             @csrf
 
             <div class="input w-full flex flex-col gap-2">
                 <label class="px-3 font-medium text-md text-white">Nama</label>
-                <input class="w-full rounded-xl p-2" type="text" name="nama"
-                    placeholder="Tulis Nama Anda">
+                <input class="w-full rounded-xl p-2" type="text" name="nama" placeholder="Tulis Nama Anda">
             </div>
 
             <div class="input w-full flex flex-col gap-2 mb-5">
@@ -37,7 +36,7 @@
                     class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Ceritakan pengalaman anda..."></textarea>
             </div>
-            <button type="submit"
+            <button type="submit" id="submitBtn"
                 class="bg-white text-blue-700 px-10 py-2 text-xl font-semibold rounded-3xl hover:bg-gray-100 cursor-pointer">
                 Submit Review
             </button>
@@ -45,6 +44,15 @@
     </section>
     <x-footer></x-footer>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script>
+        const form = document.getElementById('createForm');
+        const button = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', function() {
+            button.disabled = true;
+            button.innerText = 'Processing...';
+        });
+    </script>
 </body>
 
 </html>
