@@ -19,7 +19,7 @@
                         {{ session('success') }}
                     </div>
                 @endif --}}
-        <form method="POST" action="{{ route('booking.store') }}"
+        <form method="POST" action="{{ route('booking.store') }}" id="createForm"
             class="bg-blue-700 rounded-3xl w-full max-w-xl p-8 flex flex-col gap-5 shadow-lg">
             @csrf
             <div class="flex flex-col gap-1">
@@ -65,7 +65,7 @@
                     class="bg-white text-blue-700 px-6 py-2 text-lg font-semibold rounded-2xl hover:bg-gray-100 transition">
                     Cancel
                 </a>
-                <button type="submit"
+                <button type="submit" id="submitBtn"
                     class="bg-white text-blue-700 px-6 py-2 text-lg font-semibold rounded-2xl hover:bg-gray-100 transition">
                     Book a car
                 </button>
@@ -74,6 +74,15 @@
     </section>
     <x-footer />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script>
+        const form = document.getElementById('createForm');
+        const button = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', function() {
+            button.disabled = true;
+            button.innerText = 'Processing...';
+        });
+    </script>
 </body>
 
 </html>
