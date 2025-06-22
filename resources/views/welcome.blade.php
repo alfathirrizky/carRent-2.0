@@ -17,11 +17,10 @@
     <section class="bg-center bg-no-repeat bg-[url('/public/img/hero.png')] pt-20">
         <div class=" mx-auto max-w-screen-xl text-center px-5 py-24 lg:py-56">
             <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white lg:text-5xl">
-                Looking to save more on
-                your rental car?</h1>
-            <p class="mb-8 text-sm font-normal text-gray-300 md:text-lg lg:text-2xl">Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Aperiam, quidem repellendus voluptas necessitatibus perspiciatis,
-                error quae minima commodi sit labore iste sed. Natus voluptatem quas
+                Solusi Transportasi & Investasi dalam Satu Platform.</h1>
+            <p class="mb-8 text-sm font-normal text-gray-300 md:text-lg lg:text-2xl">Ingin bepergian tanpa ribet atau
+                mencari penghasilan tambahan dari mobil Anda? Kami hadir untuk keduanya. Temukan kemudahan dan peluang
+                dalam satu genggaman.
             </p>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                 <a href="{{ url('/admin') }}"
@@ -97,8 +96,8 @@
         <!-- Accordion -->
         <div class="flex flex-col gap-2 md:w-1/2 max-h-[400px] overflow-y-auto pr-2">
             <div>
-                <p class="text-sm font-bold text-blue-800 lg:text-lg">Frequently asked questions</p>
-                <h1 class="text-xl font-bold text-black lg:text-4xl">Everything you need to know about our services</h1>
+                <p class="text-sm font-bold text-blue-800 lg:text-lg">Pertanyaan yang sering diajukan</p>
+                <h1 class="text-xl font-bold text-black lg:text-4xl">Segala hal yang perlu Anda ketahui tentang layanan kami</h1>
             </div>
 
             <!-- Accordion Component -->
@@ -181,7 +180,7 @@
             <div
                 class=" bg-blue-900 p-5 rounded-2xl flex flex-col-reverse gap-2 lg:flex-row justify-center items-center lg:gap-5">
                 <div>
-                    <h1 class=" text-white font-bold text-xl mb-1 lg:text-2xl">CAR RENTAL</h1>
+                    <h1 class=" text-white font-bold text-xl mb-1 lg:text-2xl">Car Rent</h1>
                     <p class=" text-white text-3xs lg:text-sm mb-1 lg:mb-3 lg:w-md">Rental mobil adalah layanan
                         penyewaan
                         kendaraan roda empat kepada
@@ -202,14 +201,11 @@
                 class=" bg-blue-900 p-5 rounded-2xl flex flex-col-reverse gap-2 lg:flex-row justify-center items-center lg:gap-5">
                 <div>
                     <h1 class=" text-white font-bold text-xl mb-1 lg:text-2xl">Partnership</h1>
-                    <p class=" text-white text-3xs lg:text-sm mb-1 lg:mb-3 lg:w-md">Rental mobil adalah layanan
-                        penyewaan
-                        kendaraan roda empat kepada
-                        individu atau perusahaan untuk jangka waktu tertentu, dengan biaya sewa yang disepakati. Layanan
-                        ini
-                        bisa digunakan untuk berbagai keperluan seperti perjalanan pribadi, liburan, perjalanan bisnis,
-                        atau
-                        operasional perusahaan.</p>
+                    <p class=" text-white text-3xs lg:text-sm mb-1 lg:mb-3 lg:w-md">Kemitraan GoCar adalah hubungan
+                        kerjasama antara pengemudi dan Gojek, di mana pengemudi menyediakan layanan transportasi
+                        roda empat melalui aplikasi Gojek. Mitra GoCar akan mendapatkan penghasilan dari setiap
+                        perjalanan yang diselesaikan, sementara Gojek mendapatkan sebagian dari pendapatan tersebut
+                        sebagai komisi. </p>
                     <a href="{{ url('/partnership') }}"
                         class=" text-blue-900 bg-white text-xs lg:text-base font-medium rounded-2xl px-5">lebih
                         detail</a>
@@ -310,7 +306,8 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7933.569527590222!2d106.64598918716287!3d-6.159574710183428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f8c77cb2dff1%3A0x83b5f33f60ce6695!2sPerumahan%20Taman%20Adhiloka!5e0!3m2!1sid!2sid!4v1750557253721!5m2!1sid!2sid"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-        <a href="https://maps.app.goo.gl/FuLmPGGQNner7xE49" class=" bg-blue-800 text-white px-5 py-1 font-medium rounded-3xl">See on maps</a>
+        <a href="https://maps.app.goo.gl/FuLmPGGQNner7xE49"
+            class=" bg-blue-800 text-white px-5 py-1 font-medium rounded-3xl">See on maps</a>
     </section>
     @if (session('success'))
         <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 4000)" x-show="show"
